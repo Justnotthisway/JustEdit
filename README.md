@@ -13,6 +13,6 @@ INTERMEDIATE
 - add ability to edit textures, display different kind of textures in intuitive UI
 
 LONG  TERM
--help pages / wiki integrated or linked in the tool (long term)
+- help pages / wiki integrated or linked in the tool (long term)
 
 
