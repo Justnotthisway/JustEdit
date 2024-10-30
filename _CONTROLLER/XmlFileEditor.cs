@@ -41,124 +41,13 @@ namespace JustEditXml._CONTROLLER
                 // Clear the RichTextBox and set its text to the file contents
                 XmlPreviewerBox.Document.Blocks.Clear();
 
-                // loop over every node in the document
+
+                // loop over every node in the document recursively, keep track of depth for TABs
+                int depth = 0;
                 foreach (var node in xmlDocument.Descendants())
                 {
-
-                    //one paragraph per node or line
-                    var paragraph = new Paragraph
-                    {
-                        FontSize = 12,
-                        LineHeight = 14 // Set the desired line height
-                    };
-
-                    //get innter text for node
-                    string innerText = node.Value;
-
-                    //iterate over attributes: name, type --- e.g.: <value name=x type=x> inner text<value/>
-
-                    Run nodeNameRun = new Run()
-                    {
-                        Foreground = Brushes.Violet
-                    };
-
-                    paragraph.Inlines.Add(" <" + node.Name.ToString());
-
-                    Run attributeRun;
-                    Run attributeValueRun;
-                    foreach (var attribute in node.Attributes())
-                    {
-                        // write down name in red
-                        if (attribute.Name == "name" || attribute.Name == "id")
-                        {
-                            attributeRun = new Run($" {attribute.Name}=")
-                            {
-                                Foreground = Brushes.Black // Red for name
-                            };
-
-                            attributeValueRun = new Run($"\"{attribute.Value}\"")
-                            {
-                                Foreground = Brushes.Red // Red for name
-                            };
-                        }
-
-                        // write down type in blue
-                        else if (attribute.Name == "type")
-                        {
-                            attributeRun = new Run($" {attribute.Name}=")
-                            {
-                                Foreground = Brushes.Black // Red for name
-                            };
-
-                            attributeValueRun = new Run($"\"{attribute.Value}\"")
-                            {
-                                Foreground = Brushes.Blue // Red for name
-                            };
-                        }
-
-                        // Default color for other attributes (if needed)
-                        else
-                        {
-                            attributeRun = new Run($" {attribute.Name}=")
-                            {
-                                Foreground = Brushes.Black // Red for name
-                            };
-
-                            attributeValueRun = new Run($"\"{attribute.Value}\"")
-                            {
-                                Foreground = Brushes.Orange // Red for name
-                            };
-                        }
-
-                        //paragraph.Inlines.Add($"<{node.Name} {attributeRun}>{innerText}</{node.Name}>\n");
-                        paragraph.Inlines.Add(attributeRun);
-                        paragraph.Inlines.Add(attributeValueRun);
-                    }
-                    // write down inner text in green
-                    Run valueRun = new Run(innerText)
-                    {
-                        Foreground = Brushes.Green
-                    };
-
-                    paragraph.Inlines.Add(">");
-
-                    if (!node.HasElements)
-                    {
-                        paragraph.Inlines.Add(valueRun);
-                    }
-
-                    paragraph.Inlines.Add("</");
-                    paragraph.Inlines.Add(node.Name.ToString());
-                    paragraph.Inlines.Add(">");
-
-
-
-                    // Add the paragraph to the document
-                    XmlPreviewerBox.Document.Blocks.Add(paragraph);
-
-
-                    //OTHER OPTION, MAKE IT SINGLE EDITABLE LINES NOT TEXTBOX
-                    //var rowPanel = new StackPanel
-                    //{
-                    //    Orientation = Orientation.Horizontal,
-                    //    Margin = new Thickness(0, 0, 0, 0),
-                    //    Height = UI_Height
-                    //};
-
-                    //var inputField = new TextBox
-                    //{
-                    //    Text = node.ToString(),
-                    //    Width = 300,
-                    //    Height = UI_Height
-                    //};
-                    //rowPanel.Children.Add(inputField);
+                    WriteXmlNode_RECURSIVE(node, depth, XmlPreviewerBox);
                 }
-
-
-
-
-
-
 
                 //UI -- generate the ui rows foreach node here
                 GeneratePropertyRows(xmlFilePath, xmlDocument);
@@ -167,6 +56,145 @@ namespace JustEditXml._CONTROLLER
             {
                 MessageBox.Show($"could not open file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+        public void WriteXmlNode_RECURSIVE(XElement node, int depth, RichTextBox XmlPreviewerBox)
+        {
+            var paragraph = new Paragraph
+            {
+                FontSize = 12,
+                LineHeight = 14 // Set the desired line height
+            };
+            //indentation for deepness
+            for (int i = 0; i < depth; i++)
+            {
+                paragraph.Inlines.Add("\t");
+            }
+
+            WriteXmlLineStart(paragraph, node, XmlPreviewerBox);
+
+            if (node.HasElements) // IF WE HAVE CHILD ELEMENTS WE GO DEEPER
+            {
+                depth++;
+                foreach (var childNode in node.Elements())
+                {
+                    WriteXmlNode_RECURSIVE(childNode, depth, XmlPreviewerBox);
+                }
+                depth--;
+                //WriteXmlLineEnd(paragraph, node, XmlPreviewerBox);
+                var closingParagraph = new Paragraph
+                {
+                    FontSize = 12,
+                    LineHeight = 14 // Set the desired line height
+                };
+                for (int i = 0; i < depth; i++)
+                {
+                    closingParagraph.Inlines.Add("\t");
+                }
+                WriteXmlLineEnd(closingParagraph, node, XmlPreviewerBox); // Add the closing tag
+            }
+            else //IF WE HAVE NO CHILD ELEMENTS BE COME BACK UP.  only save innerText if has no child nodes, saves memory.
+            {
+                
+                //depth--;
+                string innerText = node.Value;
+                // write down inner text in green
+                Run nodeValue = new Run(innerText)
+                {
+                    Foreground = Brushes.Green
+                };
+
+                paragraph.Inlines.Add(nodeValue);
+                
+            }
+
+            if (!node.HasElements)
+            {
+                WriteXmlLineEnd(paragraph, node, XmlPreviewerBox);
+            }
+
+
+
+            // Add the paragraph to the document
+
+            
+        }
+        public void WriteXmlLineStart(Paragraph paragraph, XElement node, RichTextBox XmlPreviewerBox)
+        {
+            //iterate over attributes: name, type --- e.g.: <value name=x type=x> inner text<value/>
+            Run nodeName = new Run()
+            {
+                Foreground = Brushes.Violet
+            };
+
+            paragraph.Inlines.Add(" <" + node.Name.ToString());
+
+            Run attributeName;
+            Run attributeValue;
+            foreach (var attribute in node.Attributes())
+            {
+                // write down name in red
+                if (attribute.Name == "name" || attribute.Name == "id")
+                {
+                    attributeName = new Run($" {attribute.Name}=")
+                    {
+                        Foreground = Brushes.Black // Red for name
+                    };
+
+                    attributeValue = new Run($"\"{attribute.Value}\"")
+                    {
+                        Foreground = Brushes.Red // Red for name
+                    };
+                }
+
+                // write down type in blue
+                else if (attribute.Name == "type")
+                {
+                    attributeName = new Run($" {attribute.Name}=")
+                    {
+                        Foreground = Brushes.Black // Red for name
+                    };
+
+                    attributeValue = new Run($"\"{attribute.Value}\"")
+                    {
+                        Foreground = Brushes.Blue // Red for name
+                    };
+                }
+
+                // Default color for other attributes (if needed)
+                else
+                {
+                    attributeName = new Run($" {attribute.Name}=")
+                    {
+                        Foreground = Brushes.Black // Red for name
+                    };
+
+                    attributeValue = new Run($"\"{attribute.Value}\"")
+                    {
+                        Foreground = Brushes.Orange // Red for name
+                    };
+                }
+
+                //paragraph.Inlines.Add($"<{node.Name} {attributeRun}>{innerText}</{node.Name}>\n");
+                paragraph.Inlines.Add(attributeName);
+                paragraph.Inlines.Add(attributeValue);
+            }
+
+            paragraph.Inlines.Add(">");
+            if (node.HasElements)
+            {
+                XmlPreviewerBox.Document.Blocks.Add(paragraph);
+            }
+        }
+        public void WriteXmlLineEnd(Paragraph paragraph, XElement node, RichTextBox XmlPreviewerBox)
+        {
+            
+
+            paragraph.Inlines.Add("</");
+            paragraph.Inlines.Add(node.Name.ToString());
+            paragraph.Inlines.Add(">");
+
+
+            XmlPreviewerBox.Document.Blocks.Add(paragraph);
         }
         //UI Stuff --- generate Rows with: label-value | label-type | input | apply-button
         public void GeneratePropertyRows(string xmlFilePath, XDocument xmlDocument)

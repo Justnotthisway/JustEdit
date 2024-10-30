@@ -31,6 +31,7 @@ namespace JustEditXml
         {
 
         }
+
         //--- BUTTON Load an ee file into the Editor as XML ---
         private void Button_LoadFile(object sender, RoutedEventArgs e)
         {
@@ -46,9 +47,6 @@ namespace JustEditXml
 
             // (WPF stuff) set the vertical size to something big so we dont get linebreaks 
             XmlPreviewerBox.Document.PageWidth = 19200.00;
-
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

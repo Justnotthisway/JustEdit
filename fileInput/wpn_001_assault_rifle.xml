@@ -1,0 +1,1524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<container extension=".epe" format="RTPC" endian="Little">
+	<object name="root">
+		<value id="CFD7B43E" type="vec_uint">4294967295,0,0,0,1,0,3,1,3,1,1,0,0,0,0,3,1,3</value>
+		<value id="8F1D6E5A" type="vec_byte">B6,60,48,C4,05,C3,FF,FF,39,D9,11,28,0D,1A,FF,FF,58,0D,77,91,A8,9C,FF,FF,68,57,CC,19,2B,2B,FF,FF,1B,FD,25,78,41,C4,FF,FF,83,90,4F,58,CB,35,FF,FF,E1,44,EB,B8,33,A7,FF,FF,E2,F6,C2,44,C0,CD,FF,FF,04,8E,B9,D4,E5,17,FF,FF,29,D8,D1,15,EA,E4,FF,FF,3A,E4,1B,ED,8B,6B,FF,FF,A2,BD,61,29,FA,14,FF,FF,E7,B8,58,AA,B1,D6,FF,FF,59,3E,8B,3E,77,20,FF,FF,CA,B6,94,DE,9C,62,FF,FF,80,E9,7D,75,91,44,FF,FF,62,B3,C0,DC,85,45,FF,FF,E8,77,EF,6A,A0,03,FF,FF</value>
+		<value id="95C1191D" type="uint">1310711277</value>
+		<value id="6AE2DDA0" type="vec_uint">3619775931,45889119,854750954,2209374331,141946450,746167409,1054559889,1054559889,1097221416,1414868707,1603476123,2350009519,2980837818,2980837818,2980837818,3142890348,3142890348,3166021335</value>
+		<object id="00000001">
+			<value name="_class_hash" type="hashstr">CWeapon</value>
+			<value name="_object_id" type="objectid">B66048C405C3FFFF=FF</value>
+			<value name="aim_animation_modifier" type="string">WEAPON_MODIFIER_AIM_ASSAULT</value>
+			<value name="animation_modifier" type="string">WEAPON_MODIFIER_ASSAULT</value>
+			<value name="attach_setting_tuning_file" type="hashstr">editor/entities/weapons/01_wielded/wpn_001_assault_rifle/wpn_001_assault_rifle_attach_settings.wtunec</value>
+			<value name="autoaim_tuning_file" type="hashstr">editor/entities/weapons/00_shared/autoaim_tuning/autoaim_assault_rifle.wtunec</value>
+			<value name="both_trigger_fire_mode" type="uint">0</value>
+			<value name="equipped_animation_modifier" type="string">WEAPON_MODIFIER_EQUIPPED_ASSAULT</value>
+			<value name="grip_point_setting_tuning_file" type="hashstr">editor/entities/weapons/01_wielded/wpn_001_assault_rifle/wpn_001_grip.wtunec</value>
+			<value name="holstered_scale" type="float">0.9</value>
+			<value name="interaction_graph_ref" type="objectid">000000=00</value>
+			<value name="model_clip" type="uint">1</value>
+			<value name="mounted_can_be_detached" type="uint">0</value>
+			<value name="mounted_constraint_attach_ref" type="objectid">000000=00</value>
+			<value name="mounted_input_is_controlled_by_weapon" type="uint">0</value>
+			<value name="mounted_ref" type="objectid">000000=00</value>
+			<value name="name" type="string">wpn_001_assault_rifle</value>
+			<value name="name_hash" type="hashstr">wpn_001_assault_rifle</value>
+			<value name="num_ammo_icons" type="uint">10</value>
+			<value name="physics_effects_tuning" type="hashstr">editor/entities/weapons/00_shared/rigid_object_effect_settings_mag.etunec</value>
+			<value name="reticle_shape" type="uint">4</value>
+			<value name="should_ammo_flash_during_burst_cooldown" type="uint">0</value>
+			<value name="should_ammo_flash_during_fire_rate_wait" type="uint">0</value>
+			<value name="SignalSenderId" type="uint">2</value>
+			<value name="supports_precision_aim" type="uint">1</value>
+			<value name="use_auto_aim" type="uint">1</value>
+			<value name="use_auto_aim_in_precision_aim" type="uint">1</value>
+			<value name="weapon_brand" type="uint">1</value>
+			<value name="weapon_category" type="uint">1003</value>
+			<value name="weapon_collision_check" type="uint">0</value>
+			<value name="weapon_game_logic_type" type="uint">0</value>
+			<value name="weapon_id" type="uint">1</value>
+			<value name="weapon_type" type="uint">0</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="3CFAE330" type="uint">0</value>
+			<value id="FB8DC108" type="string">WEAPON_MODIFIER_WPN_001</value>
+			<value id="E04827B5" type="uint">4294967295</value>
+			<value id="20A74387" type="uint">0</value>
+			<value id="1F2868C8" type="objectid">000000=00</value>
+			<value id="E3023F12" type="uint">0</value>
+			<value id="7B294428" type="hashstr">assault_rifle</value>
+			<value id="E5F42886" type="uint">0</value>
+		</object>
+		<object id="00000002">
+			<value name="_class_hash" type="hashstr">CFiringModuleBullet</value>
+			<value name="_object_id" type="objectid">39D911280D1AFFFF=FF</value>
+			<value name="adjust_aim_direction_after_trajectory" type="uint">0</value>
+			<value name="allow_projectile_fire_direction_mode_barrel_during_burst_fire" type="uint">1</value>
+			<value name="ammunition_type" type="uint">3</value>
+			<value name="animation_layer" type="string">animations/statemachine/weapons/wpn_001_assault_rifle.al</value>
+			<value name="base_collision" type="uint">3510245692</value>
+			<value name="base_model" type="uint">912516567</value>
+			<value name="bullet_damage_type" type="uint">0</value>
+			<value name="bullet_penetration_override" type="uint">0</value>
+			<value name="burst_fire_consumes_ammo" type="uint">1</value>
+			<value name="fire_effect_mode" type="uint">2</value>
+			<value name="force_pulse_ref" type="objectid">000000=00</value>
+			<value name="holstered_scale" type="float">1</value>
+			<value name="impact_effect_method" type="uint">0</value>
+			<value name="magazine_tag" type="string">wpn_001_assault_rifle_mag</value>
+			<value name="mode" type="uint">0</value>
+			<value name="model_skeleton" type="hashstr">animations/skeletons/weapons/wpn_001_assault_rifle.bsk</value>
+			<value name="name" type="string">primary_module</value>
+			<value name="name_hash" type="hashstr">primary_module</value>
+			<value name="physical_recoil_strength" type="float">0</value>
+			<value name="predicted_reload_ammuntion_limit" type="uint">0</value>
+			<value name="predicted_reload_time" type="float">5</value>
+			<value name="projectile_fire_direction_mode" type="uint">0</value>
+			<value name="recoil_animation_max_weight" type="float">1</value>
+			<value name="reload_type" type="uint">0</value>
+			<value name="SignalSenderId" type="uint">18</value>
+			<value name="tuning_file" type="hashstr">editor/entities/weapons/01_wielded/wpn_001_assault_rifle/wpn_001_primary_assault_rifle.wtunec</value>
+			<value name="whiz_sound" type="vec_byte">63,AC,61,5C,7F,34,13,4B,99,54,AA,07,6A,62,80,AD</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="2A57BEA2" type="vec_events">87208823=0000D6D7</value>
+			<value id="DD82A542" type="uint">0</value>
+			<value id="6EACDAF2" type="vec_events">33B48F58=000035EA</value>
+			<value id="C1BC1B65" type="uint">1</value>
+			<value id="3F87B065" type="float">2</value>
+			<value id="7B8E17FE" type="string">AssaultRifleImpactPlayer</value>
+			<value id="F5A35504" type="uint">0</value>
+			<value id="FC7BA3D5" type="uint">1</value>
+			<value id="406C2A69" type="float">15</value>
+			<value id="AB08592A" type="uint">0</value>
+			<value id="DB158BD6" type="objectid">000000=00</value>
+			<value id="8CD548FF" type="uint">1</value>
+			<value id="CC518EB2" type="uint">1</value>
+			<value id="4075146A" type="string">RECOIL_MODIFIER_ASSAULT</value>
+			<value id="50BE87B9" type="uint">1</value>
+			<value id="74AC8A24" type="float">0</value>
+			<value id="5E4116A7" type="string">AssaultRifleImpactAi</value>
+			<value id="8465D3AB" type="uint">0</value>
+			<value id="716470DB" type="uint">0</value>
+			<value id="2781CC2C" type="uint">0</value>
+			<value id="F9E8AD63" type="uint">0</value>
+			<value id="A107F578" type="uint">0</value>
+			<value id="38D020D5" type="float">30</value>
+			<value id="757B1AE3" type="uint">0</value>
+			<value id="E9B552C5" type="uint">901</value>
+			<value id="04D4DB18" type="uint">0</value>
+			<object id="056C0D8C">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">8CA656599CDBFFFF=FF</value>
+				<value name="name" type="string">FirePattern_03</value>
+				<value name="name_hash" type="hashstr">FirePattern_03</value>
+				<value name="SignalSenderId" type="uint">74</value>
+				<object id="0FE0498F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">EFB868A69496FFFF=FF</value>
+					<value name="name" type="string">Assault_09</value>
+					<value name="name_hash" type="hashstr">Assault_09</value>
+					<value name="pattern_fire" type="float">0.1</value>
+					<value name="pattern_index" type="uint">9</value>
+					<value name="pattern_wait" type="float">0.44</value>
+					<value name="SignalSenderId" type="uint">81</value>
+				</object>
+				<object id="2C57F949">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">1CD09217020DFFFF=FF</value>
+					<value name="name" type="string">Assault_07</value>
+					<value name="name_hash" type="hashstr">Assault_07</value>
+					<value name="pattern_fire" type="float">0.1</value>
+					<value name="pattern_index" type="uint">7</value>
+					<value name="pattern_wait" type="float">0.1</value>
+					<value name="SignalSenderId" type="uint">83</value>
+				</object>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">7DADF12FB51AFFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.35</value>
+					<value name="SignalSenderId" type="uint">79</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">38FF401CE2A0FFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.17</value>
+					<value name="SignalSenderId" type="uint">82</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">885F771947A6FFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.17</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.25</value>
+					<value name="SignalSenderId" type="uint">77</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">1B61B3882C62FFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.44</value>
+					<value name="SignalSenderId" type="uint">75</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">67E54FD4D9CAFFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.19</value>
+					<value name="SignalSenderId" type="uint">76</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">116E0E799034FFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.1</value>
+					<value name="SignalSenderId" type="uint">78</value>
+				</object>
+				<object id="E3BA2048">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">2895F919D3B8FFFF=FF</value>
+					<value name="name" type="string">Assault_08</value>
+					<value name="name_hash" type="hashstr">Assault_08</value>
+					<value name="pattern_fire" type="float">0.2</value>
+					<value name="pattern_index" type="uint">8</value>
+					<value name="pattern_wait" type="float">0.25</value>
+					<value name="SignalSenderId" type="uint">84</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">81B99EABA615FFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.42</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.14</value>
+					<value name="SignalSenderId" type="uint">80</value>
+				</object>
+			</object>
+			<object id="12367AD4">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">8B643270CEE8FFFF=FF</value>
+				<value name="name" type="string">FirePattern_02</value>
+				<value name="name_hash" type="hashstr">FirePattern_02</value>
+				<value name="SignalSenderId" type="uint">121</value>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">5F89D5336D40FFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.06</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.12</value>
+					<value name="SignalSenderId" type="uint">126</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">CE18B111AF56FFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.21</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.2</value>
+					<value name="SignalSenderId" type="uint">128</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">D544CD3C6EBFFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.12</value>
+					<value name="SignalSenderId" type="uint">124</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">18F9F0AD73E7FFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.58</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.13</value>
+					<value name="SignalSenderId" type="uint">122</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">303ACE31B048FFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.4</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.35</value>
+					<value name="SignalSenderId" type="uint">123</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">F238733EE81AFFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.11</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.52</value>
+					<value name="SignalSenderId" type="uint">125</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">83198F1B7AB1FFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.33</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.53</value>
+					<value name="SignalSenderId" type="uint">127</value>
+				</object>
+			</object>
+			<object id="4126D8F9">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">737A1DC5F3B4FFFF=FF</value>
+				<value name="name" type="string">FirePattern_04</value>
+				<value name="name_hash" type="hashstr">FirePattern_04</value>
+				<value name="SignalSenderId" type="uint">63</value>
+				<object id="0FE0498F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">8D520B17D6F0FFFF=FF</value>
+					<value name="name" type="string">Assault_09</value>
+					<value name="name_hash" type="hashstr">Assault_09</value>
+					<value name="pattern_fire" type="float">0.1</value>
+					<value name="pattern_index" type="uint">9</value>
+					<value name="pattern_wait" type="float">0.21</value>
+					<value name="SignalSenderId" type="uint">70</value>
+				</object>
+				<object id="2C57F949">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">4B5EAB136D99FFFF=FF</value>
+					<value name="name" type="string">Assault_07</value>
+					<value name="name_hash" type="hashstr">Assault_07</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">7</value>
+					<value name="pattern_wait" type="float">0.17</value>
+					<value name="SignalSenderId" type="uint">72</value>
+				</object>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">B13B198E71DDFFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.31</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.27</value>
+					<value name="SignalSenderId" type="uint">68</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">AA977B69E93BFFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.61</value>
+					<value name="SignalSenderId" type="uint">71</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">B016D105C71FFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.03</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.24</value>
+					<value name="SignalSenderId" type="uint">66</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">375AA0714A9CFFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.03</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.13</value>
+					<value name="SignalSenderId" type="uint">64</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">C034671DC0BEFFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.27</value>
+					<value name="SignalSenderId" type="uint">65</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">971C0805229BFFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.17</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.37</value>
+					<value name="SignalSenderId" type="uint">67</value>
+				</object>
+				<object id="E3BA2048">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">4DD10B2475DFFFFF=FF</value>
+					<value name="name" type="string">Assault_08</value>
+					<value name="name_hash" type="hashstr">Assault_08</value>
+					<value name="pattern_fire" type="float">0.4</value>
+					<value name="pattern_index" type="uint">8</value>
+					<value name="pattern_wait" type="float">0.24</value>
+					<value name="SignalSenderId" type="uint">73</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">A1B91981315FFFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.03</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.1</value>
+					<value name="SignalSenderId" type="uint">69</value>
+				</object>
+			</object>
+			<object id="4C53DA71">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">BEB8C0E385E3FFFF=FF</value>
+				<value name="name" type="string">FirePattern_10</value>
+				<value name="name_hash" type="hashstr">FirePattern_10</value>
+				<value name="SignalSenderId" type="uint">96</value>
+				<object id="0FE0498F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">7BAE93D46CE9FFFF=FF</value>
+					<value name="name" type="string">Assault_09</value>
+					<value name="name_hash" type="hashstr">Assault_09</value>
+					<value name="pattern_fire" type="float">0.25</value>
+					<value name="pattern_index" type="uint">9</value>
+					<value name="pattern_wait" type="float">0.3</value>
+					<value name="SignalSenderId" type="uint">103</value>
+				</object>
+				<object id="2C57F949">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">C394D0CE981EFFFF=FF</value>
+					<value name="name" type="string">Assault_07</value>
+					<value name="name_hash" type="hashstr">Assault_07</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">7</value>
+					<value name="pattern_wait" type="float">0.2</value>
+					<value name="SignalSenderId" type="uint">105</value>
+				</object>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">37FF627D9184FFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.15</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.39</value>
+					<value name="SignalSenderId" type="uint">101</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">E8BBE436D53BFFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.14</value>
+					<value name="SignalSenderId" type="uint">104</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">15974B467FFFFFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.12</value>
+					<value name="SignalSenderId" type="uint">99</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">DE3561AA7009FFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.49</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.33</value>
+					<value name="SignalSenderId" type="uint">97</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">DEEFBF9D637EFFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.41</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.33</value>
+					<value name="SignalSenderId" type="uint">98</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">7D54C90A4A16FFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.32</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.11</value>
+					<value name="SignalSenderId" type="uint">100</value>
+				</object>
+				<object id="E3BA2048">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">487751AF3A5FFFF=FF</value>
+					<value name="name" type="string">Assault_08</value>
+					<value name="name_hash" type="hashstr">Assault_08</value>
+					<value name="pattern_fire" type="float">0.38</value>
+					<value name="pattern_index" type="uint">8</value>
+					<value name="pattern_wait" type="float">0.26</value>
+					<value name="SignalSenderId" type="uint">106</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">F9FF5D6640CDFFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.22</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.23</value>
+					<value name="SignalSenderId" type="uint">102</value>
+				</object>
+			</object>
+			<object id="74048DCD">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">A9A85AC0433FFFFF=FF</value>
+				<value name="name" type="string">FirePattern_08</value>
+				<value name="name_hash" type="hashstr">FirePattern_08</value>
+				<value name="SignalSenderId" type="uint">54</value>
+				<object id="2C57F949">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">8975626EE761FFFF=FF</value>
+					<value name="name" type="string">Assault_07</value>
+					<value name="name_hash" type="hashstr">Assault_07</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">7</value>
+					<value name="pattern_wait" type="float">0.6</value>
+					<value name="SignalSenderId" type="uint">62</value>
+				</object>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">CB27B5AA7C41FFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.13</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.12</value>
+					<value name="SignalSenderId" type="uint">59</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">7134D27D466FFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.3</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.24</value>
+					<value name="SignalSenderId" type="uint">61</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">D40CC7DB2D42FFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.3</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.3</value>
+					<value name="SignalSenderId" type="uint">57</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">503D6F3FBF13FFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.21</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.48</value>
+					<value name="SignalSenderId" type="uint">55</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">801553B82650FFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.56</value>
+					<value name="SignalSenderId" type="uint">56</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">1FCA5B38148BFFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.41</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.42</value>
+					<value name="SignalSenderId" type="uint">58</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">425EBB5517DFFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.97</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.33</value>
+					<value name="SignalSenderId" type="uint">60</value>
+				</object>
+			</object>
+			<object id="761B9A89">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">FE37A128313FFFFF=FF</value>
+				<value name="name" type="string">FirePattern_09</value>
+				<value name="name_hash" type="hashstr">FirePattern_09</value>
+				<value name="SignalSenderId" type="uint">116</value>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">4BB783DBDFFBFFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">1.4</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.13</value>
+					<value name="SignalSenderId" type="uint">118</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">B29756DA9D94FFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.47</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.12</value>
+					<value name="SignalSenderId" type="uint">117</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">6076402D1279FFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.96</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.34</value>
+					<value name="SignalSenderId" type="uint">119</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">5113E4F22FCEFFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.32</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.3</value>
+					<value name="SignalSenderId" type="uint">120</value>
+				</object>
+			</object>
+			<object id="7ABB6FDE">
+				<value name="_class_hash" type="hashstr">SWeaponPoint</value>
+				<value name="_object_id" type="objectid">4BDDE2DE40F5FFFF=FF</value>
+				<value name="fire_effect" type="uint">0</value>
+				<value name="fire_index" type="uint">0</value>
+				<value name="name" type="string">FirePosition</value>
+				<value name="name_hash" type="hashstr">FirePosition</value>
+				<value name="SignalSenderId" type="uint">132</value>
+				<value name="type" type="uint">2</value>
+				<value name="weapon_data_index" type="uint">4294967295</value>
+				<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0.129,-0.655,1</value>
+				<value id="FDE51369" type="objectid">000000=00</value>
+			</object>
+			<object id="7B051CD9">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">404369B428F0FFFF=FF</value>
+				<value name="name" type="string">FirePattern_05</value>
+				<value name="name_hash" type="hashstr">FirePattern_05</value>
+				<value name="SignalSenderId" type="uint">85</value>
+				<object id="0FE0498F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">ECC3B4AEC8B3FFFF=FF</value>
+					<value name="name" type="string">Assault_09</value>
+					<value name="name_hash" type="hashstr">Assault_09</value>
+					<value name="pattern_fire" type="float">0.4</value>
+					<value name="pattern_index" type="uint">9</value>
+					<value name="pattern_wait" type="float">0.25</value>
+					<value name="SignalSenderId" type="uint">92</value>
+				</object>
+				<object id="2C57F949">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">F055D4033854FFFF=FF</value>
+					<value name="name" type="string">Assault_07</value>
+					<value name="name_hash" type="hashstr">Assault_07</value>
+					<value name="pattern_fire" type="float">0.14</value>
+					<value name="pattern_index" type="uint">7</value>
+					<value name="pattern_wait" type="float">0.29</value>
+					<value name="SignalSenderId" type="uint">94</value>
+				</object>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">E670323AEB4FFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.11</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.17</value>
+					<value name="SignalSenderId" type="uint">90</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">1867C67A8B63FFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.13</value>
+					<value name="SignalSenderId" type="uint">93</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">D634F2CC37AFFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.15</value>
+					<value name="SignalSenderId" type="uint">88</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">3B5B98929C78FFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.03</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.19</value>
+					<value name="SignalSenderId" type="uint">86</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">FAADD92950C0FFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.22</value>
+					<value name="SignalSenderId" type="uint">87</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">FEA5FD455407FFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.35</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.15</value>
+					<value name="SignalSenderId" type="uint">89</value>
+				</object>
+				<object id="E3BA2048">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">3F4AF8F0BDAAFFFF=FF</value>
+					<value name="name" type="string">Assault_08</value>
+					<value name="name_hash" type="hashstr">Assault_08</value>
+					<value name="pattern_fire" type="float">0.68</value>
+					<value name="pattern_index" type="uint">8</value>
+					<value name="pattern_wait" type="float">0.27</value>
+					<value name="SignalSenderId" type="uint">95</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">53782969F965FFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.13</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.28</value>
+					<value name="SignalSenderId" type="uint">91</value>
+				</object>
+			</object>
+			<object id="A2FCD8D3">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">546FEBA7C1D5FFFF=FF</value>
+				<value name="name" type="string">FirePattern_01</value>
+				<value name="name_hash" type="hashstr">FirePattern_01</value>
+				<value name="SignalSenderId" type="uint">43</value>
+				<object id="0FE0498F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">A8F1C63FB82FFFF=FF</value>
+					<value name="name" type="string">Assault_09</value>
+					<value name="name_hash" type="hashstr">Assault_09</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">9</value>
+					<value name="pattern_wait" type="float">0.33</value>
+					<value name="SignalSenderId" type="uint">50</value>
+				</object>
+				<object id="2C57F949">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">5EE8A5C19B2CFFFF=FF</value>
+					<value name="name" type="string">Assault_07</value>
+					<value name="name_hash" type="hashstr">Assault_07</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">7</value>
+					<value name="pattern_wait" type="float">0.16</value>
+					<value name="SignalSenderId" type="uint">52</value>
+				</object>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">E82C9D936E15FFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.11</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.43</value>
+					<value name="SignalSenderId" type="uint">48</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">75813654E78AFFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.31</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.15</value>
+					<value name="SignalSenderId" type="uint">51</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">C82325ECB14DFFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.16</value>
+					<value name="SignalSenderId" type="uint">46</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">EEBBAD9276EFFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.11</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.18</value>
+					<value name="SignalSenderId" type="uint">44</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">3BD909485BCFFFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.31</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.4</value>
+					<value name="SignalSenderId" type="uint">45</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">11560E87C2AAFFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.21</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.15</value>
+					<value name="SignalSenderId" type="uint">47</value>
+				</object>
+				<object id="E3BA2048">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">23164B147F90FFFF=FF</value>
+					<value name="name" type="string">Assault_08</value>
+					<value name="name_hash" type="hashstr">Assault_08</value>
+					<value name="pattern_fire" type="float">0.48</value>
+					<value name="pattern_index" type="uint">8</value>
+					<value name="pattern_wait" type="float">0.84</value>
+					<value name="SignalSenderId" type="uint">53</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">4CCABE730AA7FFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.11</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.5</value>
+					<value name="SignalSenderId" type="uint">49</value>
+				</object>
+			</object>
+			<object id="D877A909">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">5B8A15717A12FFFF=FF</value>
+				<value name="name" type="string">FirePattern_07</value>
+				<value name="name_hash" type="hashstr">FirePattern_07</value>
+				<value name="SignalSenderId" type="uint">107</value>
+				<object id="2C57F949">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">B773CC4EA8D0FFFF=FF</value>
+					<value name="name" type="string">Assault_07</value>
+					<value name="name_hash" type="hashstr">Assault_07</value>
+					<value name="pattern_fire" type="float">0.92</value>
+					<value name="pattern_index" type="uint">7</value>
+					<value name="pattern_wait" type="float">0.4</value>
+					<value name="SignalSenderId" type="uint">115</value>
+				</object>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">A8C9C723004CFFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.42</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.46</value>
+					<value name="SignalSenderId" type="uint">112</value>
+				</object>
+				<object id="410903A2">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">52FCDA62BEA1FFFF=FF</value>
+					<value name="name" type="string">Assault_06</value>
+					<value name="name_hash" type="hashstr">Assault_06</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">6</value>
+					<value name="pattern_wait" type="float">0.15</value>
+					<value name="SignalSenderId" type="uint">114</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">3DF6397F985CFFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.98</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.36</value>
+					<value name="SignalSenderId" type="uint">110</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">61E4180BFDCCFFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.13</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.11</value>
+					<value name="SignalSenderId" type="uint">108</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">76CA7D0B8E54FFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.12</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.11</value>
+					<value name="SignalSenderId" type="uint">109</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">4AD1601E039EFFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.49</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.28</value>
+					<value name="SignalSenderId" type="uint">111</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">E17CFA2F292BFFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.13</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.39</value>
+					<value name="SignalSenderId" type="uint">113</value>
+				</object>
+			</object>
+			<object id="F5E8C9EA">
+				<value name="_class_hash" type="hashstr">SWeaponFirePattern</value>
+				<value name="_object_id" type="objectid">6EC96445CB76FFFF=FF</value>
+				<value name="name" type="string">FirePattern_06</value>
+				<value name="name_hash" type="hashstr">FirePattern_06</value>
+				<value name="SignalSenderId" type="uint">36</value>
+				<object id="31046C72">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">EE4C9F5A017FFFF=FF</value>
+					<value name="name" type="string">Assault_04</value>
+					<value name="name_hash" type="hashstr">Assault_04</value>
+					<value name="pattern_fire" type="float">0.11</value>
+					<value name="pattern_index" type="uint">4</value>
+					<value name="pattern_wait" type="float">0.15</value>
+					<value name="SignalSenderId" type="uint">41</value>
+				</object>
+				<object id="5D709139">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">4336B8739D18FFFF=FF</value>
+					<value name="name" type="string">Assault_03</value>
+					<value name="name_hash" type="hashstr">Assault_03</value>
+					<value name="pattern_fire" type="float">0.85</value>
+					<value name="pattern_index" type="uint">3</value>
+					<value name="pattern_wait" type="float">0.3</value>
+					<value name="SignalSenderId" type="uint">39</value>
+				</object>
+				<object id="7ACC3B21">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">76E677FF2B8FFFFF=FF</value>
+					<value name="name" type="string">Assault_01</value>
+					<value name="name_hash" type="hashstr">Assault_01</value>
+					<value name="pattern_fire" type="float">0.39</value>
+					<value name="pattern_index" type="uint">1</value>
+					<value name="pattern_wait" type="float">0.48</value>
+					<value name="SignalSenderId" type="uint">37</value>
+				</object>
+				<object id="88E8745F">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">B289C6967DD0FFFF=FF</value>
+					<value name="name" type="string">Assault_05</value>
+					<value name="name_hash" type="hashstr">Assault_05</value>
+					<value name="pattern_fire" type="float">0.68</value>
+					<value name="pattern_index" type="uint">5</value>
+					<value name="pattern_wait" type="float">0.2</value>
+					<value name="SignalSenderId" type="uint">38</value>
+				</object>
+				<object id="CEDFB2A9">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">5A1F8177CEAFFFF=FF</value>
+					<value name="name" type="string">Assault_02</value>
+					<value name="name_hash" type="hashstr">Assault_02</value>
+					<value name="pattern_fire" type="float">0.67</value>
+					<value name="pattern_index" type="uint">2</value>
+					<value name="pattern_wait" type="float">0.45</value>
+					<value name="SignalSenderId" type="uint">40</value>
+				</object>
+				<object id="F71CCC2C">
+					<value name="_class_hash" type="hashstr">SWeaponFirePatternComponent</value>
+					<value name="_object_id" type="objectid">342F38CAC6E4FFFF=FF</value>
+					<value name="name" type="string">Assault_00</value>
+					<value name="name_hash" type="hashstr">Assault_00</value>
+					<value name="pattern_fire" type="float">0.04</value>
+					<value name="pattern_index" type="uint">0</value>
+					<value name="pattern_wait" type="float">0.1</value>
+					<value name="SignalSenderId" type="uint">42</value>
+				</object>
+			</object>
+		</object>
+		<object id="00000003">
+			<value name="_class_hash" type="hashstr">COutline</value>
+			<value name="_object_id" type="objectid">580D7791A89CFFFF=FF</value>
+			<value name="color" type="vec4">0,1,0,1</value>
+			<value name="name" type="string">Outline</value>
+			<value name="name_hash" type="hashstr">Outline</value>
+			<value name="opacity" type="float">1</value>
+			<value name="SignalSenderId" type="uint">150</value>
+			<value name="type" type="uint">0</value>
+			<value name="visible" type="uint">1</value>
+			<value name="width" type="uint">2</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+		</object>
+		<object id="00000004">
+			<value name="_class_hash" type="hashstr">CFiringModuleMissile</value>
+			<value name="_object_id" type="objectid">6857CC192B2BFFFF=FF</value>
+			<value name="allow_projectile_fire_direction_mode_barrel_during_burst_fire" type="uint">1</value>
+			<value name="ammunition_type" type="uint">9</value>
+			<value name="burst_fire_consumes_ammo" type="uint">1</value>
+			<value name="fire_effect_mode" type="uint">0</value>
+			<value name="force_pulse_ref" type="objectid">E877EF6AA003FFFF=FF</value>
+			<value name="holstered_scale" type="float">1</value>
+			<value name="impact_effect_table" type="objectid">000000=00</value>
+			<value name="min_height_over_ground_for_fire" type="float">0</value>
+			<value name="missile_air_lockon" type="uint">0</value>
+			<value name="missile_gravity_factor" type="float">1</value>
+			<value name="missile_ground_lockon" type="uint">0</value>
+			<value name="missile_no_blend_out_of_relative_velocity" type="uint">0</value>
+			<value name="missile_override_rotation_with_holder_rotation" type="uint">0</value>
+			<value name="missile_reset_system_group_time" type="float">0</value>
+			<value name="missile_should_travel_straight" type="uint">0</value>
+			<value name="missile_should_travel_straight_up" type="uint">0</value>
+			<value name="missile_should_travel_straight_up_time_random" type="float">0.25</value>
+			<value name="missile_use_recoil_anim" type="uint">1</value>
+			<value name="mode" type="uint">1</value>
+			<value name="name" type="string">secondary_module</value>
+			<value name="name_hash" type="hashstr">secondary_module</value>
+			<value name="physical_projectile_collision_model" type="hashstr">models/weapons/wpn_001_assault_rifle/wpn_001_assault_rifle_grenade_projectile_col.pfxc</value>
+			<value name="physical_projectile_model" type="uint">994723309</value>
+			<value name="physical_recoil_strength" type="float">0</value>
+			<value name="predicted_reload_ammuntion_limit" type="uint">1</value>
+			<value name="predicted_reload_time" type="float">5</value>
+			<value name="projectile_fire_direction_mode" type="uint">0</value>
+			<value name="recoil_animation_max_weight" type="float">1</value>
+			<value name="reload_type" type="uint">0</value>
+			<value name="SignalSenderId" type="uint">8</value>
+			<value name="trail_effect_ai" type="hashstr">effects/jc_weapons/hand_grenade/grenade_launcher_trail.vfxc</value>
+			<value name="trail_effect_player" type="hashstr">effects/jc_weapons/hand_grenade/grenade_launcher_trail.vfxc</value>
+			<value name="trail_position" type="vec">0,0,0</value>
+			<value name="trail_sound_ai" type="vec_byte">E4,0D,78,23,50,F3,5D,43,BB,E8,FF,62,E5,4D,A3,33</value>
+			<value name="tuning_file" type="hashstr">editor/entities/weapons/01_wielded/wpn_001_assault_rifle/wpn_001_secondary_grenade_launcher.wtunec</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="ECE11022" type="uint">0</value>
+			<value id="DD82A542" type="uint">2</value>
+			<value id="6EACDAF2" type="vec_events">33B48F58=000035EA</value>
+			<value id="464C683A" type="float">2</value>
+			<value id="C1BC1B65" type="uint">1</value>
+			<value id="CB22EBC6" type="uint">0</value>
+			<value id="3F87B065" type="float">2</value>
+			<value id="6DB23629" type="float">2</value>
+			<value id="5E9AE275" type="float">2</value>
+			<value id="4E2B9543" type="uint">0</value>
+			<value id="FC7BA3D5" type="uint">1</value>
+			<value id="406C2A69" type="float">15</value>
+			<value id="DB158BD6" type="objectid">000000=00</value>
+			<value id="C8FB023E" type="uint">0</value>
+			<value id="8CD548FF" type="uint">0</value>
+			<value id="CC518EB2" type="uint">1</value>
+			<value id="1B3F086A" type="uint">0</value>
+			<value id="4075146A" type="string">RECOIL_MODIFIER_ASSAULT_GRENADE</value>
+			<value id="74AC8A24" type="float">0</value>
+			<value id="8465D3AB" type="uint">0</value>
+			<value id="22755838" type="float">2</value>
+			<value id="A107F578" type="uint">0</value>
+			<value id="38D020D5" type="float">30</value>
+			<value id="52F24410" type="uint">0</value>
+			<value id="E9B552C5" type="uint">972</value>
+			<value id="757B1AE3" type="uint">1</value>
+			<value id="2A57BEA2" type="vec_events">87208823=0000D6D7</value>
+			<object id="F62AE2BB">
+				<value name="_class_hash" type="hashstr">SWeaponPoint</value>
+				<value name="_object_id" type="objectid">801B5AE97A21FFFF=FF</value>
+				<value name="fire_effect" type="uint">0</value>
+				<value name="fire_index" type="uint">0</value>
+				<value name="name" type="string">FirePosition</value>
+				<value name="name_hash" type="hashstr">FirePosition</value>
+				<value name="SignalSenderId" type="uint">14</value>
+				<value name="type" type="uint">2</value>
+				<value name="weapon_data_index" type="uint">4294967295</value>
+				<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0.063,-0.573,1</value>
+				<value id="FDE51369" type="objectid">000000=00</value>
+			</object>
+		</object>
+		<object id="00000005">
+			<value name="_class_hash" type="hashstr">CBarrelRecoilWeaponComponent</value>
+			<value name="_object_id" type="objectid">1BFD257841C4FFFF=FF</value>
+			<value name="base_model" type="uint">3802805319</value>
+			<value name="internal_fire_point" type="uint">0</value>
+			<value name="max_recoil_on_empty_ammo" type="uint">1</value>
+			<value name="name" type="string">bullet_eject</value>
+			<value name="name_hash" type="hashstr">bullet_eject</value>
+			<value name="recoil_fire_time" type="float">0.025</value>
+			<value name="recoil_max_length" type="float">0.068</value>
+			<value name="recoil_recover_time" type="float">0.08</value>
+			<value name="SignalSenderId" type="uint">133</value>
+			<value name="start_enabled" type="uint">1</value>
+			<value name="weapon_data_index" type="uint">0</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,-0.001,1</value>
+			<value id="F736EFF3" type="uint">0</value>
+			<value id="93F56AD3" type="uint">0</value>
+		</object>
+		<object id="00000006">
+			<value name="_class_hash" type="hashstr">CLootEntry</value>
+			<value name="_object_id" type="objectid">83904F58CB35FFFF=FF</value>
+			<value name="name" type="string">LootEntry</value>
+			<value name="name_hash" type="hashstr">LootEntry</value>
+			<value name="pin" type="objectid">E7B858AAB1D6FFFF=FF</value>
+			<value name="SignalSenderId" type="uint">4</value>
+			<value name="target" type="objectid">B66048C405C3FFFF=FF</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="09460B7A" type="objectid">CAB694DE9C62FFFF=FF</value>
+			<value id="DC1A3DAE" type="objectid">593E8B3E7720FFFF=FF</value>
+		</object>
+		<object id="00000007">
+			<value name="_class_hash" type="hashstr">CTriggerBarkWeaponComponent</value>
+			<value name="_object_id" type="objectid">E144EBB833A7FFFF=FF</value>
+			<value name="name" type="string">TriggerBarkWeaponComponent</value>
+			<value name="name_hash" type="hashstr">TriggerBarkWeaponComponent</value>
+			<value name="SignalSenderId" type="uint">15</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="DA701922" type="uint">38</value>
+			<value id="BED17B17" type="uint">4294967295</value>
+			<value id="4E25DC69" type="uint">4294967295</value>
+			<value id="CDA096E3" type="uint">4294967295</value>
+		</object>
+		<object id="00000008">
+			<value name="_class_hash" type="hashstr">CTriggerBarkWeaponComponent</value>
+			<value name="_object_id" type="objectid">E2F6C244C0CDFFFF=FF</value>
+			<value name="name" type="string">TriggerBarkWeaponComponent</value>
+			<value name="name_hash" type="hashstr">TriggerBarkWeaponComponent</value>
+			<value name="SignalSenderId" type="uint">129</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="DA701922" type="uint">4294967295</value>
+			<value id="BED17B17" type="uint">4294967295</value>
+			<value id="4E25DC69" type="uint">20</value>
+			<value id="CDA096E3" type="uint">4294967295</value>
+		</object>
+		<object id="00000009">
+			<value name="_class_hash" type="hashstr">CMaterialEffectTable</value>
+			<value name="_materials_list" type="vec_byte">E6,CF,1C,E2,3B,89,30,9E,B0,36,BB,4F,90,27,D0,04,1B,26,8D,02,E6,87,58,AE,C7,35,C5,58,4B,9B,33,4E,A6,04,93,A0,67,E2,92,5D,E6,CF,1C,E2,E7,DC,24,B3,20,19,7F,46,BB,5D,9A,47,3B,CD,3E,40,89,78,22,0B,39,88,80,5D,76,46,35,44,AE,92,D3,19,3F,30,C2,A4,F3,33,03,E3,C7,35,C5,58,4B,9B,33,4E,A6,04,93,A0,67,E2,92,5D,F3,33,03,E3,E7,DC,24,B3,20,19,7F,46,BB,5D,9A,47,3B,CD,3E,40,89,78,22,0B,E7,DC,24,B3,20,19,7F,46,BB,5D,9A,47,3B,CD,3E,40,47,B8,66,F1,9E,49,8C,D3,39,41,56,4A,86,6C,DE,F3,0B,C5,D3,C0,1F,8A,1B,50,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,3B,89,30,9E,B0,36,BB,4F,90,27,D0,04,1B,26,8D,02,E6,CF,1C,E2,3B,89,30,9E,B0,36,BB,4F,90,27,D0,04,1B,26,8D,02,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,7B,54,4A,95,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,7B,54,4A,95,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,7B,54,4A,95,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,3B,89,30,9E,B0,36,BB,4F,90,27,D0,04,1B,26,8D,02,7B,54,4A,95,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,F3,33,03,E3,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,D6,1F,A9,00,79,3C,C7,47,A7,9A,AE,53,DB,58,D6,7B,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,26,47,8A,5B,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11,E6,CF,1C,E2,A6,38,CE,24,99,62,A5,4A,AA,CC,9D,D3,13,85,BB,11</value>
+			<value name="_object_id" type="objectid">48EB9D4E517FFFF=FF</value>
+			<value name="name" type="string">grenade_explosion_effect_table</value>
+			<value name="name_hash" type="hashstr">grenade_explosion_effect_table</value>
+			<value name="SignalSenderId" type="uint">16</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+		</object>
+		<object id="0000000A">
+			<value name="_class_hash" type="hashstr">CWallPenetrationWeaponComponent</value>
+			<value name="_object_id" type="objectid">29D8D115EAE4FFFF=FF</value>
+			<value name="add_extra_up_angle_on_collision" type="uint">0</value>
+			<value name="can_aim_when_penetrating_wall" type="uint">0</value>
+			<value name="check_from_above_shoulder" type="uint">0</value>
+			<value name="check_from_hips" type="uint">0</value>
+			<value name="check_from_shoulder" type="uint">1</value>
+			<value name="check_to_barrel_pos" type="uint">0</value>
+			<value name="extra_angle_down_speed" type="float">90</value>
+			<value name="extra_angle_up_speed" type="float">180</value>
+			<value name="name" type="string">WallPenetrationWeaponComponent</value>
+			<value name="name_hash" type="hashstr">WallPenetrationWeaponComponent</value>
+			<value name="SignalSenderId" type="uint">134</value>
+			<value name="use_predicted_fire_from_if_not_in_aim_mode" type="uint">1</value>
+			<value name="weapon_length" type="float">0.8</value>
+			<value name="weapon_supports_lean_over" type="uint">1</value>
+			<value name="weapon_width" type="float">0.05</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+		</object>
+		<object id="0000000B">
+			<value name="_class_hash" type="hashstr">CDynamicLightObject</value>
+			<value name="_object_id" type="objectid">3AE41BED8B6BFFFF=FF</value>
+			<value name="cull_distance" type="float">500</value>
+			<value name="diffuse" type="vec">0.5254902,1,0.5411765</value>
+			<value name="duration" type="float">-1</value>
+			<value name="enabled" type="uint">1</value>
+			<value name="fade_in_duration" type="float">0.2</value>
+			<value name="fade_out_duration" type="float">0.2</value>
+			<value name="has_distant_lod" type="uint">1</value>
+			<value name="inner_radius" type="float">0</value>
+			<value name="is_shadow_caster" type="uint">0</value>
+			<value name="is_spot_light" type="uint">1</value>
+			<value name="multiplier" type="float">0.0025</value>
+			<value name="name" type="string">DynamicLightObject</value>
+			<value name="name_hash" type="hashstr">DynamicLightObject</value>
+			<value name="near_cap" type="float">0.01</value>
+			<value name="on_during_daytime" type="uint">1</value>
+			<value name="priority" type="uint">1</value>
+			<value name="projected_texture" type="uint">6</value>
+			<value name="projected_texture_enabled" type="uint">1</value>
+			<value name="projected_texture_u_scale" type="float">1</value>
+			<value name="projected_texture_v_scale" type="float">1</value>
+			<value name="radius" type="float">1</value>
+			<value name="SignalSenderId" type="uint">131</value>
+			<value name="specular_multiplier" type="float">1</value>
+			<value name="spot_angle" type="float">80</value>
+			<value name="spot_inner_angle" type="float">0</value>
+			<value name="video_projector" type="uint">0</value>
+			<value name="volume_intensity" type="float">0.001</value>
+			<value name="volumetric_mode" type="uint">1</value>
+			<value name="world" type="mat">-4.371139E-08,0,1,0, 0,1,0,0, -1,0,-4.371139E-08,0, 0.04431666,0.1364157,-0.3282377,1</value>
+			<value id="1230DF27" type="objectid">000000=00</value>
+			<value id="FFFE1632" type="float">1</value>
+		</object>
+		<object id="0000000C">
+			<value name="_class_hash" type="hashstr">CInteractionContext</value>
+			<value name="_object_id" type="objectid">A2BD6129FA14FFFF=FF</value>
+			<value name="enabled" type="uint">0</value>
+			<value name="name" type="string">PickupContext</value>
+			<value name="name_hash" type="hashstr">PickupContext</value>
+			<value name="SignalSenderId" type="uint">136</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,-0.009808288,0,1</value>
+			<object id="5C29E749">
+				<value name="_class_hash" type="hashstr">CInteractionTrigger</value>
+				<value name="_object_id" type="objectid">D1B3B31E3E56FFFF=FF</value>
+				<value name="_version" type="uint">1</value>
+				<value name="deformable_transform_name" type="uint">3735928559</value>
+				<value name="is_inside_event" type="vec_events">0E00B974=FFFF4E6F</value>
+				<value name="name" type="string">InteractionTrigger</value>
+				<value name="name_hash" type="hashstr">InteractionTrigger</value>
+				<value name="not_valid_string_id" type="uint">3735928559</value>
+				<value name="on_enter_event" type="vec_events">0E00B974=FFFF4E6F</value>
+				<value name="SignalSenderId" type="uint">147</value>
+				<value name="trigger_shape" type="uint">0</value>
+				<value name="user_type" type="uint">0</value>
+				<value name="world" type="mat">4,0,0,0, 0,3,0,0, 0,0,4,0, 0,0,0,1</value>
+			</object>
+			<object id="AFCE988D">
+				<value name="_class_hash" type="hashstr">CInteraction</value>
+				<value name="_object_id" type="objectid">7387C841603EFFFF=FF</value>
+				<value name="name" type="string">PickupInteraction</value>
+				<value name="name_hash" type="hashstr">PickupInteraction</value>
+				<value name="node_identifier" type="uint">0</value>
+				<value name="SignalSenderId" type="uint">148</value>
+				<value name="user_id" type="objectid">000000=00</value>
+				<object id="B8912C6E">
+					<value name="_class_hash" type="hashstr">CInteractionComponentPickup</value>
+					<value name="_object_id" type="objectid">E75CE27A425CFFFF=FF</value>
+					<value name="name" type="string">CInteractionComponentPickup</value>
+					<value name="name_hash" type="hashstr">CInteractionComponentPickup</value>
+					<value name="SignalSenderId" type="uint">149</value>
+					<value name="user_type" type="uint">2</value>
+				</object>
+			</object>
+			<object id="F4681AA6">
+				<value name="_class_hash" type="hashstr">CInteractionGraph</value>
+				<value name="_object_id" type="objectid">D465A208D915FFFF=FF</value>
+				<value name="adf_bytes" type="vec_byte">20,46,44,41,04,00,00,00,01,00,00,00,60,03,00,00,14,00,00,00,78,03,00,00,00,00,00,00,00,00,00,00,53,00,00,00,F4,0F,00,00,E3,16,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,49,6E,74,65,72,61,63,74,69,6F,6E,43,6F,6E,74,65,78,74,5F,61,64,66,2E,61,64,66,20,69,6E,20,20,00,00,00,00,00,00,00,00,00,04,00,00,00,00,00,00,00,70,00,00,00,10,00,00,00,05,00,00,00,00,00,00,00,B0,01,00,00,20,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,F8,01,00,00,00,00,00,00,04,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,80,3F,00,00,00,00,00,00,00,00,00,00,00,00,FE,D5,2A,79,EF,BE,AD,DE,EF,BE,AD,DE,EF,BE,AD,DE,EF,BE,AD,DE,FF,FF,FF,FF,FF,FF,FF,FF,FF,FF,FF,FF,FF,FF,FF,FF,02,00,00,00,FF,FF,FF,FF,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,7C,81,8B,E3,EF,BE,AD,DE,8A,78,B9,CA,B9,39,58,51,EF,BE,AD,DE,7C,FD,B2,8E,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,04,F7,07,6C,EF,BE,AD,DE,8A,78,B9,CA,F2,DF,D5,55,EF,BE,AD,DE,7C,FD,B2,8E,00,00,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,B7,4F,EE,50,EF,BE,AD,DE,8A,78,B9,CA,18,37,1D,CA,EF,BE,AD,DE,7C,FD,B2,8E,00,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,C3,3E,46,85,EF,BE,AD,DE,8A,78,B9,CA,60,B2,85,6B,EF,BE,AD,DE,7C,FD,B2,8E,00,00,00,00,00,00,00,00,04,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,00,00,00,00,14,00,00,00,00,00,00,00,78,D1,7D,DB,38,7D,44,1C,60,00,00,00,F8,02,00,00,00,00,00,00,00,00,00,00,01,00,00,00,70,00,00,00,08,00,00,00,38,7D,44,1C,01,00,00,00,00,00,00,00,00,80,00,00,00,00,00,00,00,00,00,00,08,00,00,00,02,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,4F,4E,5E,07,04,00,00,00,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,04,00,00,00,00,00,00,00,F5,0C,C6,9A,08,00,00,00,10,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,05,00,00,00,00,00,00,00,41,30,FB,5D,08,00,00,00,20,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,00,00,00,00,9E,9B,96,CE,08,00,00,00,30,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,07,00,00,00,00,00,00,00,D8,F8,AE,C1,08,00,00,00,40,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,00,00,00,00,51,F4,B3,7F,08,00,00,00,50,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,09,00,00,00,00,00,00,00,20,57,A1,B0,08,00,00,00,60,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,10,00,00,00,08,00,00,00,F5,0C,C6,9A,0A,00,00,00,00,00,00,00,00,80,00,00,A5,13,B5,CD,00,00,00,00,00,00,00,00,01,00,00,00,40,00,00,00,10,00,00,00,A5,13,B5,CD,0B,00,00,00,00,00,00,00,03,80,00,00,00,00,00,00,00,00,00,00,01,00,00,00,0C,00,00,00,00,00,00,00,F2,7B,5F,24,10,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,04,00,00,00,40,00,00,00,04,00,00,00,F2,7B,5F,24,0D,00,00,00,00,00,00,00,03,80,00,00,07,A2,15,75,10,00,00,00,00,00,00,00,03,00,00,00,10,00,00,00,08,00,00,00,41,30,FB,5D,0E,00,00,00,00,00,00,00,00,80,00,00,5A,BF,7C,D3,00,00,00,00,00,00,00,00,01,00,00,00,40,00,00,00,08,00,00,00,5A,BF,7C,D3,0F,00,00,00,00,00,00,00,01,80,00,00,00,00,00,00,00,00,00,00,10,00,00,00,02,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,10,00,00,00,00,00,00,00,2A,A1,F5,03,04,00,00,00,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,11,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,0C,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,12,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,10,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,13,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,14,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,14,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,18,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,15,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,1C,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,16,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,20,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,17,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,24,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,18,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,28,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,19,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,2C,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,1A,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,30,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,1B,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,34,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,1C,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,38,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,1D,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,3C,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,1E,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,3C,00,00,01,01,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,04,00,00,00,04,00,00,00,2A,A1,F5,03,1F,00,00,00,00,00,00,00,03,80,00,00,00,00,00,00,00,00,00,00,05,00,00,00,20,00,00,00,00,00,00,00,00,00,00,00,21,00,00,00,00,00,00,00,01,00,00,00,22,00,00,00,00,00,00,00,02,00,00,00,23,00,00,00,00,00,00,00,03,00,00,00,24,00,00,00,00,00,00,00,04,00,00,00,09,00,00,00,04,00,00,00,04,00,00,00,BF,64,3F,C0,25,00,00,00,00,00,00,00,01,80,01,00,4D,29,C5,48,00,00,00,00,00,00,00,00,07,00,00,00,01,00,00,00,01,00,00,00,DA,6F,C7,C0,26,00,00,00,00,00,00,00,01,80,01,00,00,00,00,00,01,00,00,00,00,00,00,00,03,00,00,00,10,00,00,00,08,00,00,00,9E,9B,96,CE,27,00,00,00,00,00,00,00,00,80,00,00,D2,95,6B,9E,00,00,00,00,00,00,00,00,01,00,00,00,30,00,00,00,08,00,00,00,D2,95,6B,9E,28,00,00,00,00,00,00,00,01,80,00,00,00,00,00,00,00,00,00,00,0A,00,00,00,02,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,08,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,12,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,10,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,2A,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,14,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,2B,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,18,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,2C,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,1C,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,2D,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,20,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,2E,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,24,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,2F,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,28,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,1D,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,2C,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,10,00,00,00,08,00,00,00,D8,F8,AE,C1,30,00,00,00,00,00,00,00,00,80,00,00,D4,B2,42,DC,00,00,00,00,00,00,00,00,01,00,00,00,40,00,00,00,08,00,00,00,D4,B2,42,DC,31,00,00,00,00,00,00,00,01,80,00,00,00,00,00,00,00,00,00,00,10,00,00,00,02,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,32,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,08,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,2A,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,0C,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,33,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,10,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,34,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,14,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,12,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,18,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,35,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,1C,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,36,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,20,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,37,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,24,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,38,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,28,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,39,00,00,00,00,00,00,00,05,0E,AD,4D,04,00,00,00,2C,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,3A,00,00,00,00,00,00,00,C8,D8,9B,F6,04,00,00,00,30,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,3B,00,00,00,00,00,00,00,3E,AC,DB,62,04,00,00,00,34,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,1D,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,38,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,3C,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,38,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,3D,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,38,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,08,00,00,00,04,00,00,00,04,00,00,00,05,0E,AD,4D,3E,00,00,00,00,00,00,00,03,80,00,00,00,00,00,00,00,00,00,00,03,00,00,00,3F,00,00,00,00,00,00,00,00,00,00,00,40,00,00,00,00,00,00,00,01,00,00,00,41,00,00,00,00,00,00,00,02,00,00,00,08,00,00,00,04,00,00,00,04,00,00,00,C8,D8,9B,F6,42,00,00,00,00,00,00,00,03,80,00,00,00,00,00,00,00,00,00,00,02,00,00,00,43,00,00,00,00,00,00,00,00,00,00,00,44,00,00,00,00,00,00,00,01,00,00,00,08,00,00,00,04,00,00,00,04,00,00,00,3E,AC,DB,62,45,00,00,00,00,00,00,00,03,80,00,00,00,00,00,00,00,00,00,00,03,00,00,00,46,00,00,00,00,00,00,00,00,00,00,00,47,00,00,00,00,00,00,00,01,00,00,00,48,00,00,00,00,00,00,00,02,00,00,00,03,00,00,00,10,00,00,00,08,00,00,00,51,F4,B3,7F,49,00,00,00,00,00,00,00,00,80,00,00,6C,CB,41,14,00,00,00,00,00,00,00,00,01,00,00,00,48,00,00,00,08,00,00,00,6C,CB,41,14,4A,00,00,00,00,00,00,00,01,80,00,00,00,00,00,00,00,00,00,00,10,00,00,00,02,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,29,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,08,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,4B,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,10,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,4C,00,00,00,00,00,00,00,1F,E0,39,A1,08,00,00,00,18,00,00,00,01,00,00,00,FF,FF,FF,FF,FF,FF,FF,FF,32,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,20,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,34,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,24,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,12,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,28,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,4D,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,2C,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,2F,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,30,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,2C,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,34,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,2D,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,38,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,2E,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,3C,00,00,00,01,00,00,00,FF,FF,FF,FF,00,00,00,00,1D,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,40,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,4E,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,40,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,3C,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,40,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,3D,00,00,00,00,00,00,00,DA,6F,C7,C0,01,00,00,00,40,00,00,03,00,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,10,00,00,00,08,00,00,00,20,57,A1,B0,4F,00,00,00,00,00,00,00,00,80,00,00,00,01,8A,9E,00,00,00,00,00,00,00,00,01,00,00,00,0C,00,00,00,04,00,00,00,00,01,8A,9E,50,00,00,00,00,00,00,00,01,80,00,00,00,00,00,00,00,00,00,00,03,00,00,00,32,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,00,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,51,00,00,00,00,00,00,00,BF,64,3F,C0,04,00,00,00,04,00,00,00,01,00,00,00,EF,BE,AD,DE,00,00,00,00,52,00,00,00,00,00,00,00,33,E6,2F,19,04,00,00,00,08,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,08,14,0C,0D,0C,05,0B,07,05,09,1C,19,04,09,17,14,08,08,0A,0F,10,15,14,13,0E,0D,10,0F,0E,07,1A,18,1F,1E,2A,29,29,15,08,1D,1A,02,06,0B,0D,13,12,12,18,15,0A,08,07,11,09,10,0E,08,0D,13,12,13,18,20,1D,20,1D,29,29,23,2E,33,34,17,14,08,10,0D,10,1B,18,0A,18,69,6E,73,74,61,6E,63,65,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,44,61,74,61,00,43,6F,6E,74,65,78,74,46,6C,61,67,73,00,4E,6F,66,43,6F,6E,64,69,74,69,6F,6E,73,00,4E,6F,64,65,56,65,72,74,69,63,65,73,00,4E,6F,64,65,73,00,54,72,61,6E,73,69,74,69,6F,6E,73,00,45,6E,74,72,69,65,73,00,45,78,69,74,73,00,49,4B,54,61,72,67,65,74,73,00,41,5B,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,54,72,61,6E,73,66,6F,72,6D,5D,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,54,72,61,6E,73,66,6F,72,6D,00,64,61,74,61,00,49,41,5B,66,6C,6F,61,74,5D,00,41,5B,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,5D,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,00,4E,6F,64,65,54,79,70,65,00,4E,61,6D,65,48,61,73,68,00,4D,6F,64,69,66,69,65,72,49,64,00,46,69,72,73,74,44,65,66,6F,72,6D,48,61,73,68,00,53,65,63,6F,6E,64,44,65,66,6F,72,6D,48,61,73,68,00,42,72,65,61,6B,61,62,6C,65,50,61,72,74,42,65,68,61,76,69,6F,72,00,46,69,72,73,74,54,72,61,6E,73,69,74,69,6F,6E,49,6E,64,65,78,00,4C,61,73,74,54,72,61,6E,73,69,74,69,6F,6E,49,6E,64,65,78,00,46,69,72,73,74,45,78,69,74,49,6E,64,65,78,00,4C,61,73,74,45,78,69,74,49,6E,64,65,78,00,46,69,72,73,74,56,65,72,74,65,78,49,6E,64,65,78,00,4C,61,73,74,56,65,72,74,65,78,49,6E,64,65,78,00,4E,6F,64,65,49,64,65,6E,74,69,66,69,65,72,00,45,6E,61,62,6C,65,64,00,49,73,52,65,73,74,72,69,63,74,65,64,44,65,66,6F,72,6D,61,62,6C,65,41,72,65,61,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,54,79,70,65,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,54,79,70,65,5F,50,4F,49,4E,54,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,54,79,70,65,5F,4C,49,4E,45,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,54,79,70,65,5F,44,45,46,4F,52,4D,41,42,4C,45,5F,50,4F,49,4E,54,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,54,79,70,65,5F,44,45,46,4F,52,4D,41,42,4C,45,5F,4C,49,4E,45,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,4E,6F,64,65,54,79,70,65,5F,44,45,46,4F,52,4D,41,42,4C,45,5F,41,52,45,41,00,53,74,72,69,6E,67,48,61,73,68,5F,34,38,63,35,32,39,34,64,5F,34,00,75,69,6E,74,38,3A,20,31,00,41,5B,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,54,72,61,6E,73,69,74,69,6F,6E,5D,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,54,72,61,6E,73,69,74,69,6F,6E,00,49,64,00,55,73,65,54,61,67,00,54,6F,4E,6F,64,65,49,6E,64,65,78,00,46,72,6F,6D,4E,6F,64,65,49,6E,64,65,78,00,46,69,72,73,74,43,6F,6E,64,69,74,69,6F,6E,49,6E,64,65,78,00,4C,61,73,74,43,6F,6E,64,69,74,69,6F,6E,49,6E,64,65,78,00,4D,6F,76,65,6D,65,6E,74,49,64,65,6E,74,69,66,69,65,72,00,41,5B,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,45,6E,74,72,79,5D,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,45,6E,74,72,79,00,48,61,73,68,65,64,4E,61,6D,65,00,41,63,74,45,76,65,6E,74,00,53,74,61,74,65,49,64,00,41,6C,69,67,6E,6D,65,6E,74,42,6F,6E,65,48,61,73,68,00,4E,6F,64,65,49,6E,64,65,78,00,41,63,74,69,6F,6E,49,64,65,6E,74,69,66,69,65,72,00,45,6E,74,72,79,54,72,61,6E,73,66,6F,72,6D,00,55,73,65,72,54,79,70,65,00,57,65,69,67,68,74,69,6E,67,4D,6F,64,65,00,56,61,6C,69,64,61,74,69,6F,6E,52,65,66,65,72,65,6E,63,65,00,55,73,65,50,72,6F,6A,65,63,74,69,6F,6E,51,75,65,72,79,00,55,73,65,4F,62,73,74,72,75,63,74,69,6F,6E,51,75,65,72,79,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,55,73,65,72,54,79,70,65,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,55,73,65,72,54,79,70,65,5F,50,4C,41,59,45,52,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,55,73,65,72,54,79,70,65,5F,4E,50,43,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,55,73,65,72,54,79,70,65,5F,41,4E,59,4F,4E,45,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,57,65,69,67,68,74,69,6E,67,4D,6F,64,65,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,57,65,69,67,68,74,69,6E,67,4D,6F,64,65,5F,46,41,43,49,4E,47,5F,44,49,52,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,57,65,69,67,68,74,69,6E,67,4D,6F,64,65,5F,43,41,4D,45,52,41,5F,44,49,52,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,56,61,6C,69,64,61,74,69,6F,6E,52,65,66,65,72,65,6E,63,65,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,56,61,6C,69,64,61,74,69,6F,6E,52,65,66,65,72,65,6E,63,65,5F,45,4E,54,52,59,4E,4F,44,45,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,56,61,6C,69,64,61,74,69,6F,6E,52,65,66,65,72,65,6E,63,65,5F,45,4E,54,52,59,54,52,41,4E,53,46,4F,52,4D,00,45,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,56,61,6C,69,64,61,74,69,6F,6E,52,65,66,65,72,65,6E,63,65,5F,45,58,54,52,41,43,54,45,44,4D,4F,54,49,4F,4E,00,41,5B,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,45,78,69,74,5D,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,45,78,69,74,00,47,72,61,70,68,50,74,72,00,49,6E,74,65,72,61,63,74,69,6F,6E,49,6E,64,65,78,00,45,78,69,74,54,72,61,6E,73,66,6F,72,6D,00,55,73,65,45,78,69,74,54,72,61,6E,73,66,6F,72,6D,00,41,5B,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,49,4B,54,61,72,67,65,74,5D,00,49,6E,74,65,72,61,63,74,69,6F,6E,47,72,61,70,68,49,4B,54,61,72,67,65,74,00,44,65,66,6F,72,6D,48,61,73,68,00,44,65,66,6F,72,6D,61,62,6C,65,54,72,61,6E,73,66,6F,72,6D,49,6E,64,65,78,00</value>
+				<value name="enabled" type="uint">1</value>
+				<value name="force_walk" type="uint">0</value>
+				<value name="is_enclosed" type="uint">0</value>
+				<value name="is_fake_stunting" type="uint">0</value>
+				<value name="is_motorbikeish" type="uint">0</value>
+				<value name="lod_invisible" type="uint">0</value>
+				<value name="lod_semi_visible" type="uint">0</value>
+				<value name="modifier" type="uint">3735928559</value>
+				<value name="name" type="string">InteractionGraph</value>
+				<value name="name_hash" type="hashstr">InteractionGraph</value>
+				<value name="SignalSenderId" type="uint">137</value>
+				<value name="unstuntify" type="uint">0</value>
+				<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+				<object id="5BF7E965">
+					<value name="_class_hash" type="hashstr">CInteractionGraphEntry</value>
+					<value name="_object_id" type="objectid">5206C8D6A240FFFF=FF</value>
+					<value name="adf_index" type="uint">0</value>
+					<value name="entry_transform" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+					<value name="force_walk" type="uint">0</value>
+					<value name="interaction" type="objectid">7387C841603EFFFF=FF</value>
+					<value name="interaction_event_activation" type="vec_events">0E00B974=FFFF4E6F</value>
+					<value name="is_enclosed" type="uint">0</value>
+					<value name="is_fake_stunting" type="uint">0</value>
+					<value name="is_motorbikeish" type="uint">0</value>
+					<value name="lod_invisible" type="uint">0</value>
+					<value name="lod_semi_visible" type="uint">0</value>
+					<value name="SignalSenderId" type="uint">138</value>
+					<value name="unstuntify" type="uint">0</value>
+					<object id="510B0885">
+						<value name="_class_hash" type="hashstr">CInteractionGraphParentWeaponLimit</value>
+						<value name="_object_id" type="objectid">23C82BCBA2FCFFFF=FF</value>
+						<value name="SignalSenderId" type="uint">139</value>
+						<value id="19B5699A" type="uint">1</value>
+					</object>
+				</object>
+				<object id="84F68C74">
+					<value name="_class_hash" type="hashstr">CInteractionGraphPointNode</value>
+					<value name="_object_id" type="objectid">2632DF4F3CDCFFFF=FF</value>
+					<value name="adf_index" type="uint">0</value>
+					<value name="force_walk" type="uint">0</value>
+					<value name="game_object" type="objectid">000000=00</value>
+					<value name="is_enclosed" type="uint">0</value>
+					<value name="is_fake_stunting" type="uint">0</value>
+					<value name="is_motorbikeish" type="uint">0</value>
+					<value name="lod_invisible" type="uint">0</value>
+					<value name="lod_semi_visible" type="uint">0</value>
+					<value name="SignalSenderId" type="uint">142</value>
+					<value name="unstuntify" type="uint">0</value>
+					<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+				</object>
+				<object id="9E179BC5">
+					<value name="_class_hash" type="hashstr">CInteractionGraphEntry</value>
+					<value name="_object_id" type="objectid">7D9B2DB233E1FFFF=FF</value>
+					<value name="adf_index" type="uint">1</value>
+					<value name="entry_transform" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+					<value name="force_walk" type="uint">0</value>
+					<value name="interaction" type="objectid">7387C841603EFFFF=FF</value>
+					<value name="interaction_event_activation" type="vec_events">0E00B974=FFFF4E6F</value>
+					<value name="is_enclosed" type="uint">0</value>
+					<value name="is_fake_stunting" type="uint">0</value>
+					<value name="is_motorbikeish" type="uint">0</value>
+					<value name="lod_invisible" type="uint">0</value>
+					<value name="lod_semi_visible" type="uint">0</value>
+					<value name="SignalSenderId" type="uint">140</value>
+					<value name="unstuntify" type="uint">0</value>
+					<object id="9D3093CD">
+						<value name="_class_hash" type="hashstr">CInteractionGraphParentWeaponLimit</value>
+						<value name="_object_id" type="objectid">EE06CB3F0D85FFFF=FF</value>
+						<value name="SignalSenderId" type="uint">141</value>
+						<value id="19B5699A" type="uint">1</value>
+					</object>
+				</object>
+				<object id="CA432F73">
+					<value name="_class_hash" type="hashstr">CInteractionGraphEntry</value>
+					<value name="_object_id" type="objectid">FEAF8F4ED4D1FFFF=FF</value>
+					<value name="adf_index" type="uint">3</value>
+					<value name="entry_transform" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+					<value name="force_walk" type="uint">0</value>
+					<value name="interaction" type="objectid">7387C841603EFFFF=FF</value>
+					<value name="interaction_event_activation" type="vec_events">0E00B974=FFFF4E6F</value>
+					<value name="is_enclosed" type="uint">0</value>
+					<value name="is_fake_stunting" type="uint">0</value>
+					<value name="is_motorbikeish" type="uint">0</value>
+					<value name="lod_invisible" type="uint">0</value>
+					<value name="lod_semi_visible" type="uint">0</value>
+					<value name="SignalSenderId" type="uint">145</value>
+					<value name="unstuntify" type="uint">0</value>
+					<object id="97E48351">
+						<value name="_class_hash" type="hashstr">CInteractionGraphParentWeaponLimit</value>
+						<value name="_object_id" type="objectid">81FE3F780AA3FFFF=FF</value>
+						<value name="SignalSenderId" type="uint">146</value>
+						<value id="19B5699A" type="uint">1</value>
+					</object>
+				</object>
+				<object id="E515CDD3">
+					<value name="_class_hash" type="hashstr">CInteractionGraphEntry</value>
+					<value name="_object_id" type="objectid">7C7FB7E1114DFFFF=FF</value>
+					<value name="adf_index" type="uint">2</value>
+					<value name="entry_transform" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+					<value name="force_walk" type="uint">0</value>
+					<value name="interaction" type="objectid">7387C841603EFFFF=FF</value>
+					<value name="interaction_event_activation" type="vec_events">0E00B974=FFFF4E6F</value>
+					<value name="is_enclosed" type="uint">0</value>
+					<value name="is_fake_stunting" type="uint">0</value>
+					<value name="is_motorbikeish" type="uint">0</value>
+					<value name="lod_invisible" type="uint">0</value>
+					<value name="lod_semi_visible" type="uint">0</value>
+					<value name="SignalSenderId" type="uint">143</value>
+					<value name="unstuntify" type="uint">0</value>
+					<object id="B6F8B06B">
+						<value name="_class_hash" type="hashstr">CInteractionGraphParentWeaponLimit</value>
+						<value name="_object_id" type="objectid">102060FC869EFFFF=FF</value>
+						<value name="SignalSenderId" type="uint">144</value>
+						<value id="19B5699A" type="uint">1</value>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object id="0000000D">
+			<value name="_class_hash" type="hashstr">CBillboard</value>
+			<value name="_object_id" type="objectid">E7B858AAB1D6FFFF=FF</value>
+			<value name="alias" type="objectid">51B06B463F610000=00</value>
+			<value name="Multiplier" type="float">0</value>
+			<value name="name" type="string">pin</value>
+			<value name="name_hash" type="hashstr">pin</value>
+			<value name="SignalSenderId" type="uint">5</value>
+			<value name="start_enabled" type="uint">1</value>
+			<value name="Texture" type="hashstr">textures/atmosphere/rain.ddsc</value>
+			<value name="world" type="mat">-0.3,-2.622683E-08,0,0, 8.742278E-08,-1,0,0, 0,0,0.3,0, 0,0.5,0,1</value>
+			<value id="DF910D0A" type="float">-1</value>
+			<value id="0C4A7B45" type="vec2">0,0</value>
+			<value id="2084B304" type="uint">0</value>
+			<value id="E25DD295" type="uint">1</value>
+			<value id="E6043D83" type="uint">0</value>
+			<value id="1F55EC2E" type="float">-1</value>
+			<value id="A8DEC7E7" type="float">-1</value>
+			<value id="EE452603" type="uint">0</value>
+			<value id="AEE948A0" type="float">0</value>
+			<value id="A51C9997" type="float">0</value>
+			<value id="A35F9025" type="uint">2</value>
+		</object>
+		<object id="0000000E">
+			<value name="_class_hash" type="hashstr">CBillboard</value>
+			<value name="_object_id" type="objectid">593E8B3E7720FFFF=FF</value>
+			<value name="alias" type="objectid">E7DE37D7997C0000=00</value>
+			<value name="Multiplier" type="float">0</value>
+			<value name="name" type="string">head_far</value>
+			<value name="name_hash" type="hashstr">head_far</value>
+			<value name="SignalSenderId" type="uint">6</value>
+			<value name="start_enabled" type="uint">1</value>
+			<value name="Texture" type="hashstr">textures/ui/upgrades/upgrade_advanced_detector_sensor.ddsc</value>
+			<value name="world" type="mat">0.1,0,0,0, 0,0.1,0,0, 0,0,0.1,0, 0,1,0,1</value>
+			<value id="DF910D0A" type="float">1</value>
+			<value id="0C4A7B45" type="vec2">0,0</value>
+			<value id="2084B304" type="uint">0</value>
+			<value id="E25DD295" type="uint">0</value>
+			<value id="E6043D83" type="uint">0</value>
+			<value id="1F55EC2E" type="float">-1</value>
+			<value id="A8DEC7E7" type="float">10</value>
+			<value id="EE452603" type="uint">0</value>
+			<value id="AEE948A0" type="float">0</value>
+			<value id="A51C9997" type="float">0</value>
+			<value id="A35F9025" type="uint">0</value>
+		</object>
+		<object id="0000000F">
+			<value name="_class_hash" type="hashstr">CBillboard</value>
+			<value name="_object_id" type="objectid">CAB694DE9C62FFFF=FF</value>
+			<value name="alias" type="objectid">152ECC502EA0000=00</value>
+			<value name="Multiplier" type="float">0</value>
+			<value name="name" type="string">head_near</value>
+			<value name="name_hash" type="hashstr">head_near</value>
+			<value name="SignalSenderId" type="uint">7</value>
+			<value name="start_enabled" type="uint">1</value>
+			<value name="Texture" type="hashstr">textures/ui/weapon_icons/11.ddsc</value>
+			<value name="world" type="mat">0.75,0,0,0, 0,0.75,0,0, 0,0,0.75,0, 0,1,0,1</value>
+			<value id="DF910D0A" type="float">1</value>
+			<value id="0C4A7B45" type="vec2">0,0</value>
+			<value id="2084B304" type="uint">0</value>
+			<value id="E25DD295" type="uint">0</value>
+			<value id="E6043D83" type="uint">0</value>
+			<value id="1F55EC2E" type="float">-1</value>
+			<value id="A8DEC7E7" type="float">10</value>
+			<value id="EE452603" type="uint">0</value>
+			<value id="AEE948A0" type="float">0</value>
+			<value id="A51C9997" type="float">0</value>
+			<value id="A35F9025" type="uint">0</value>
+		</object>
+		<object id="00000010">
+			<value name="_class_hash" type="hashstr">CModelAttachementWeaponComponent</value>
+			<value name="_object_id" type="objectid">80E97D759144FFFF=FF</value>
+			<value name="base_model" type="uint">4191427934</value>
+			<value name="name" type="string">model.shell</value>
+			<value name="name_hash" type="hashstr">model.shell</value>
+			<value name="SignalSenderId" type="uint">17</value>
+			<value name="start_enabled" type="uint">0</value>
+			<value name="weapon_data_index" type="uint">0</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="93F56AD3" type="uint">0</value>
+			<value id="F736EFF3" type="uint">0</value>
+		</object>
+		<object id="00000011">
+			<value name="_class_hash" type="hashstr">CModelAttachementWeaponComponent</value>
+			<value name="_object_id" type="objectid">62B3C0DC8545FFFF=FF</value>
+			<value name="base_model" type="uint">288555408</value>
+			<value name="name" type="string">model.magazine</value>
+			<value name="name_hash" type="hashstr">model.magazine</value>
+			<value name="SignalSenderId" type="uint">130</value>
+			<value name="start_enabled" type="uint">1</value>
+			<value name="weapon_data_index" type="uint">0</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0.01538086,-0.137207,1</value>
+			<value id="93F56AD3" type="uint">1</value>
+			<value id="41F22922" type="string">Mag_RF</value>
+			<value id="F736EFF3" type="uint">2</value>
+		</object>
+		<object id="00000012">
+			<value name="_class_hash" type="hashstr">CForcePulse</value>
+			<value name="_object_id" type="objectid">E877EF6AA003FFFF=FF</value>
+			<value name="bullet_spawner_ref" type="objectid">000000=00</value>
+			<value name="despawn_radius" type="float">0</value>
+			<value name="enable_by_default" type="uint">0</value>
+			<value name="exclude_player" type="uint">0</value>
+			<value name="explosion_category" type="uint">4294967295</value>
+			<value name="explosion_does_emp_damage" type="uint">0</value>
+			<value name="explosion_does_fire_damage" type="uint">1</value>
+			<value name="explosion_does_force_kill" type="uint">0</value>
+			<value name="explosion_effect_table" type="objectid">48EB9D4E517FFFF=FF</value>
+			<value name="explosion_force_direction_noise_angle" type="float">20</value>
+			<value name="explosion_from_player_cannot_damage_player_vehicle" type="uint">0</value>
+			<value name="explosion_hit_pos_to_COM_random_size" type="float">0.1</value>
+			<value name="explosion_hit_pos_to_COM_scaler" type="float">0.1</value>
+			<value name="explosion_normal_always_up" type="uint">0</value>
+			<value name="explosion_pressure" type="float">100</value>
+			<value name="explosion_radius" type="float">6</value>
+			<value name="explosion_velocity" type="float">30</value>
+			<value name="move_to_player_on_active" type="uint">1</value>
+			<value name="name" type="string">CForcePulse</value>
+			<value name="name_hash" type="hashstr">CForcePulse</value>
+			<value name="SettingsFile" type="hashstr">editor/entities/weapons/01_wielded/wpn_001_assault_rifle/wpn_001_secondary_explosion.ftunec</value>
+			<value name="SignalSenderId" type="uint">13</value>
+			<value name="world" type="mat">1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1</value>
+			<value id="2166473B" type="uint">0</value>
+			<value id="CCCD1DCE" type="vec">0,0,0</value>
+			<value id="73518AFE" type="uint">0</value>
+			<value id="32995929" type="uint">0</value>
+		</object>
+	</object>
+</container>
