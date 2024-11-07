@@ -14,14 +14,19 @@
             <ColumnDefinition Width="30*" />
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" Background="DarkOrange">
-
-            <TextBox x:Name="DebugTextBox" TextWrapping="Wrap" Text="debug Box" Margin="10,70,10,162"/>
+        <Border Grid.Column="0" Background="#adaeae">
+            <StackPanel Orientation="Vertical">
+                <Button Content="load File" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="49" Width="150" Click="Button_LoadFile" Background="#ffb907" BorderThickness="0"/>
+                <Button Content="Save File" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="49" Width="150" Click="Button_SaveFile" Background="#ffb907" BorderThickness="0"/>
+                
+            </StackPanel>
         </Border>
 
-        <Border Grid.Column="1" Background="SlateGray">
-            <ScrollViewer>
-                <StackPanel x:Name="StackPanelContainer">
+        <Border Grid.Column="1" Background="#d3d4d5">
+            <ScrollViewer x:Name="ScrollViewerMiddle" 
+                          ScrollChanged="ScrollViewer_ScrollChanged"
+                          PreviewMouseWheel="MyScrollViewer_PreviewMouseWheel">
+                <StackPanel x:Name="StackPanelPropertyContainer">
                     <!-- Rows will be added here dynamically -->
                 </StackPanel>
             </ScrollViewer>
@@ -53,6 +58,16 @@
                 
             </avalonEdit:TextEditor>
         </Border>
-        <Button Content="load File" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="49" Width="150" Click="Button_LoadFile"/>
-    </Grid>
+        </Grid>
+
+        
+        <Window.Resources>
+        <ContextMenu x:Key="RipGrepMenu">
+            <MenuItem Header="Search with RipGrep" Command="{Binding RipGrepCommand}" 
+          CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ContextMenu}, Path=PlacementTarget.Text}"/>
+        </ContextMenu>
+        
+    </Window.Resources>
 </Window>
+
+

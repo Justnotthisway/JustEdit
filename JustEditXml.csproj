@@ -59,11 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="_CONTROLLER\IdStackPanel.cs" />
     <Compile Include="_CONTROLLER\GameFileSelector.cs" />
     <Compile Include="_CONTROLLER\XmlFileEditorAvalonEdit.cs" />
-    <Compile Include="_CONTROLLER\XmlFileEditorWPF.cs" />
     <Compile Include="_CONTROLLER\XmlFileEditorBase.cs" />
-    <Compile Include="_MODEL\JustCause4DataModel.cs" />
+    <Compile Include="_MODEL\BoundXmlNode.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

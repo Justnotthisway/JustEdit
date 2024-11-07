@@ -1,10 +1,10 @@
-﻿using System;
+﻿using JustEditXml._MODEL;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -16,7 +16,9 @@ namespace JustEditXml._CONTROLLER
         {
 
         }
-        
+        protected XDocument _document;
+        protected string _FilePath;
+        public BoundXmlNode RootNode { get; set; }
 
         //implement abstract methods in Child class with choosen UI Element
         abstract public void AddLine(string documentLine);
@@ -26,14 +28,23 @@ namespace JustEditXml._CONTROLLER
         //entry point for the class, trigger it with Button etc. to load a complete formatted xml document in desired UI element.
         public void OpenXml(string xmlFilePath)
         {
-            this.AddLine($"loading {xmlFilePath} ...");
-            //DEBUG with Watch 
-            List<XElement> xmlNodes = XDocument.Load(xmlFilePath).Descendants().ToList();
-
+            _FilePath = xmlFilePath;
             try
             {
-                // Read all text from the file
-                XDocument xmlDocument = XDocument.Load(xmlFilePath);
+                //DEBUG with Watch  
+                //List<XElement> xmlNodes = XDocument.Load(xmlFilePath).Descendants().ToList();
+
+                XmlReaderSettings settings = new XmlReaderSettings
+                {
+                    IgnoreWhitespace = true // This will ignore whitespace and &#xA
+                };
+
+                // Create an XmlReader with the settings
+                using (XmlReader reader = XmlReader.Create(xmlFilePath, settings))
+                {
+                    // Load the XDocument using the XmlReader
+                    _document = XDocument.Load(reader);
+                }
 
                 // Clear the RichTextBox and set its text to the file contents
                 this.ClearAllText();
@@ -43,15 +54,16 @@ namespace JustEditXml._CONTROLLER
                 int depth = 0;
                 //foreach (var node in xmlDocument.Descendants())
                 //{
-                BuildXmlNode(xmlDocument.Root, depth);
+                BuildXmlNode(_document.Root, depth);
                 //}
 
                 //UI -- generate the ui rows foreach node here
-                GeneratePropertyRows(xmlFilePath, xmlDocument);
+                GeneratePropertyRows(xmlFilePath, _document);
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"could not open file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show($"could not open file, not an xml file", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -95,12 +107,6 @@ namespace JustEditXml._CONTROLLER
                 documentLine = BuildXmlLineEnd(documentLine, node);
                 this.AddLine(documentLine); //we add </closingnode> here
             }
-
-
-
-            // Add the paragraph to the document
-
-
         }
         public string BuildXmlLineStart(string documentLine, XElement node)
         {
@@ -201,7 +207,22 @@ namespace JustEditXml._CONTROLLER
         }
         public void SaveXml()
         {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+                saveFileDialog.Title = "Save an XML File";
+                saveFileDialog.DefaultExt = "xml"; // Default file extension
+                saveFileDialog.AddExtension = true; // Automatically add extension
+                saveFileDialog.FileName = Path.GetFileNameWithoutExtension(_FilePath)+"_modded";
 
+                // Show the dialog and get result
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Save the XDocument to the selected path
+                    _document.Save(saveFileDialog.FileName);
+                    System.Windows.Forms.MessageBox.Show("File saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
     }

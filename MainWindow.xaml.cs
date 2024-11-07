@@ -17,6 +17,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using System.Xml;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace JustEditXml
 {
@@ -25,8 +28,9 @@ namespace JustEditXml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private FoldingManager foldingManager;
+        public FoldingManager FoldingManager;
         private XmlFoldingStrategy foldingStrategy;
+        private XmlFileEditorAvalonEdit _XmlFileEditor;
         public MainWindow()
         {
             InitializeComponent();
@@ -34,16 +38,18 @@ namespace JustEditXml
         }
         private void InitAvalonEdit()
         {
-            foldingManager = FoldingManager.Install(XmlPreviewerBox.TextArea);
+            //XmlPreviewerBox.Width = 1920;
+            XmlPreviewerBox.FontSize = 17;
+            FoldingManager = FoldingManager.Install(XmlPreviewerBox.TextArea);
             foldingStrategy = new XmlFoldingStrategy();
-            foldingStrategy.UpdateFoldings(foldingManager, XmlPreviewerBox.Document);
+            foldingStrategy.UpdateFoldings(FoldingManager, XmlPreviewerBox.Document);
 
             // Set a minimum width for the folding margin (make sure it's wide enough)
             //XmlPreviewerBox.TextArea.LeftMargins[0].Width = 16;  // Adjust width if necessary
 
             XmlPreviewerBox.TextChanged += (sender, e) =>
             {
-                foldingStrategy.UpdateFoldings(foldingManager, XmlPreviewerBox.Document);
+                foldingStrategy.UpdateFoldings(FoldingManager, XmlPreviewerBox.Document);
             };
         }
         //--- BUTTON Load an ee file into the Editor as XML ---
@@ -51,15 +57,15 @@ namespace JustEditXml
         {
             GameFileSelector gameFileSelector = new GameFileSelector();
             GameFileConverter gameFileConverter = new GameFileConverter();
-            XmlFileEditorAvalonEdit xmlFileEditor = new XmlFileEditorAvalonEdit(this);
+            _XmlFileEditor = new XmlFileEditorAvalonEdit(this);
             //XmlFileEditorWPF xmlFileEditor = new XmlFileEditorWPF(this);
 
             //get the user to select a file from the Windows fileselect Dialog
             string filePath = gameFileSelector.SelectGameFile();
 
             //put the textcontent of the xml inside the Xml Preview Box (skip unpack for now), but delete old text first
-            xmlFileEditor.ClearAllText();
-            xmlFileEditor.OpenXml(filePath);
+            _XmlFileEditor.ClearAllText();
+            _XmlFileEditor.OpenXml(filePath);
 
             // ---- (WPF stuff) ----
             // set the vertical size to something big so we dont get linebreaks 
@@ -67,10 +73,49 @@ namespace JustEditXml
 
             // ---- (AvalonEdit Stuff) ----
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
+            if (e.OriginalSource == ScrollViewerMiddle)
+            {
+                // Synchronize AvalonEdit's vertical scroll position with ScrollViewer's scroll position
+                if (e.VerticalChange > 0)
+                {
+                    XmlPreviewerBox.LineDown();
+                    XmlPreviewerBox.LineDown();
+                    //XmlPreviewerBox.ScrollToVerticalOffset(XmlPreviewerBox.VerticalOffset + e.VerticalChange);
+                }
+                if (e.VerticalChange < 0)
+                {
+                    XmlPreviewerBox.LineUp();
+                    XmlPreviewerBox.LineUp();
+                    //XmlPreviewerBox.ScrollToVerticalOffset(XmlPreviewerBox.VerticalOffset + e.VerticalChange);
+                }
+            }
+            
+        }
+        private void MyScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            // Prevent default scrolling behavior
+            e.Handled = true;
 
+            // Get the ScrollViewer
+            var scrollViewer = sender as ScrollViewer;
+
+            if (e.Delta > 0) // Scrolling up
+            {
+                // Scroll up exactly TWO AvalonEdit Lines
+                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - XmlPreviewerBox.TextArea.TextView.DefaultLineHeight*2);
+            }
+            else if (e.Delta < 0) // Scrolling down
+            {
+                // Scroll down exactly TWO AvalonEdit Lines
+                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset + XmlPreviewerBox.TextArea.TextView.DefaultLineHeight*2);
+            }
+        }
+
+        private void Button_SaveFile(object sender, RoutedEventArgs e)
+        {
+            _XmlFileEditor.SaveXml();
         }
     }
 }

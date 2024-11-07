@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<container extension=".epe" format="RTPC" endian="Little">
+  <object name="root">
+    <value id="001" type="unit">0001</value>
+    <value id="002" type="unit">0010</value>
+    <value id="003" type="unit">0011</value>
+    <value id="004" type="unit">0100</value>
+    <object id="000001">
+      <value name="name" type="string">Sebastiano DiRavello</value>
+      <value name="_class_hash" type="string">CSebastianoDiRavello</value>
+      <value name="height" type="double">180.5</value>
+      <value name="profession" type="string">Dictator</value>
+    </object>
+    <object id="000002">
+      <value name="name" type="string">BoloSantosi</value>
+      <value name="_class_hash" type="string">CBoloSantosi</value>
+      <value name="height" type="string">160.8</value>
+      <value name="profession" type="string">DJ</value>
+    </object>
+    <object id="000003">
+      <value name="name" type="string">TomSheldon</value>
+      <value name="_class_hash" type="string">CTomSheldon</value>
+      <value name="height" type="string">175.0</value>
+      <value name="profession" type="string">Traitor</value>
+    </object>
+  </object>
+</container>
