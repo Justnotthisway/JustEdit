@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,8 @@ namespace JustEditXml._CONTROLLER
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "all files (*.*)|*.*";
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            //openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Recent);
 
             if (openFileDialog.ShowDialog() == true)
             {

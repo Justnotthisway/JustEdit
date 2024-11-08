@@ -57,18 +57,18 @@ namespace JustEditXml._MODEL
             switch (rule)
             {
                 case NamingRule.WARNING:
-                    PrimaryLabel.Text = $"{node.Attribute("WARNING").Name}: {node.Attribute("WARNING").Value}";
+                    PrimaryLabel.Text = $"{node.Attribute("WARNING")?.Name}: {node.Attribute("WARNING")?.Value}";
                     break;
                 case NamingRule.NOTE:
-                    PrimaryLabel.Text = $"{node.Attribute("NOTE").Name}: {node.Attribute("NOTE").Value}";
+                    PrimaryLabel.Text = $"{node.Attribute("NOTE")?.Name}: {node.Attribute("NOTE")?.Value}";
                     break;
                 case NamingRule.hasName:
-                    PrimaryLabel.Text = $"{node.Attribute("name").Value}";
+                    PrimaryLabel.Text = $"{node.Attribute("name")?.Value}";
                     break;
                 case NamingRule.childHasName:
                     PrimaryLabel.Text = node
                         .Elements()
-                        .Where(e => e.Attribute("name").Value == "name")
+                        .Where(e => e.Attribute("name")?.Value == "name")
                         .Select(e => e.Value)
                         .FirstOrDefault();
                     break;
@@ -98,7 +98,7 @@ namespace JustEditXml._MODEL
                 case NamingRule.childHasName:
                     SecoundaryLabel.Text = node
                     .Elements()
-                    .Where(e => e.Attribute("name").Value == "_class_hash")
+                    .Where(e => e.Attribute("name")?.Value == "_class_hash")
                     .Select(e => e.Value.ToString())
                     .FirstOrDefault();
                     break;

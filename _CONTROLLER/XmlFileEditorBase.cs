@@ -213,7 +213,7 @@ namespace JustEditXml._CONTROLLER
                 saveFileDialog.Title = "Save an XML File";
                 saveFileDialog.DefaultExt = "xml"; // Default file extension
                 saveFileDialog.AddExtension = true; // Automatically add extension
-                saveFileDialog.FileName = Path.GetFileNameWithoutExtension(_FilePath)+"_modded";
+                saveFileDialog.FileName = Path.GetFileNameWithoutExtension(_FilePath)+"_mod";
 
                 // Show the dialog and get result
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
