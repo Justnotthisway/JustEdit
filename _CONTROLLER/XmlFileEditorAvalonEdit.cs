@@ -34,7 +34,9 @@ namespace JustEditXml._CONTROLLER
         public double RowHeightCorrectionEditable = 0;
         public override void AddLine(string documentLine)
         {
-            MainWindow.XmlPreviewerBox.AppendText(documentLine);
+            string actualLine = documentLine.Replace("&#xA", "_lf_");
+            actualLine = actualLine.Replace("\n", "")+"\n";
+            MainWindow.XmlPreviewerBox.AppendText(actualLine);
         }
 
         public override void ClearAllText()
@@ -127,73 +129,25 @@ namespace JustEditXml._CONTROLLER
             rowPanel.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffb907"));
             var lineIndex = new TextBlock
             {
-                Text = $"{rowIndex} ",
+                Text = $"{rowIndex}: ",
                 TextAlignment = TextAlignment.Right,
-                Width = 48,
+                Width = 24,
                 Height = RowHeight - 2,
                 FontSize = fontSize,
+                FontWeight = FontWeights.Light,
                 Margin = new Thickness(0, 0, 0, 0),
             };
-            string nameForNode = String.Empty;
-            string hashForNode = String.Empty;
+            var PrimaryHeaderLabel = XmlLabeler.GetPrimaryHeaderLabel(node, XmlLabeler.DecideHeaderLabels(node));
+            PrimaryHeaderLabel.Height = RowHeight - 2;
+            PrimaryHeaderLabel.FontSize = fontSize;
+            PrimaryHeaderLabel.FontWeight = FontWeights.Bold;
+            PrimaryHeaderLabel.Margin = new Thickness(12, 0, 12, 0);
 
-            bool NodehasNameAttribute = node.Attributes().Any(attributes => attributes.Name.ToString() == "name");
-            bool hasChildNodeWithAttributeName = node.Elements().Any(attribute => attribute.Name.ToString() != "name");
-            bool AttributeNameIsRoot = node.Elements()
-                    .Where(e => e.Attribute("name")?.Value == "name")
-                    .Select(e => e.Value.ToString())
-                    .FirstOrDefault() == "root";
-            if (NodehasNameAttribute)
-            {
-                nameForNode = node.Attribute("name").Value;
-                foreach (var attribute in node.Attributes())
-                {
-                    hashForNode += $" {attribute.Name}=\"{attribute.Value}\"";
-                }
-            }
-            else if (hasChildNodeWithAttributeName && !AttributeNameIsRoot)
-            {
-                nameForNode = node
-                    .Elements()
-                    .Where(e => e.Attribute("name")?.Value == "name")
-                    .Select(e => e.Value.ToString())
-                    .FirstOrDefault();
-
-                hashForNode = node
-                    .Elements()
-                    .Where(e => e.Attribute("name")?.Value == "_class_hash")
-                    .Select(e => e.Value.ToString())
-                    .FirstOrDefault();
-            }
-            else
-            {
-                nameForNode = node.Name.ToString();
-
-                foreach (var attribute in node.Attributes())
-                {
-                    hashForNode += $" {attribute.Name}=\"{attribute.Value}\"";
-                }
-            }
-
-
-            var namedXmlLabel = new TextBlock
-            {
-                Text = $"    {nameForNode ?? ""}      ",
-                Width = 240,
-                Height = RowHeight - 2,
-                FontWeight = FontWeights.Bold,
-                FontSize = fontSize,
-                Margin = new Thickness(0, 0, 0, 0),
-            };
-
-            var rawXmlLabel = new TextBlock
-            {
-                Text = $"{hashForNode ?? ""}",
-                Width = 160,
-                Height = RowHeight - 2,
-                FontSize = fontSize,
-                Margin = new Thickness(0, 0, 0, 0),
-            };
+            var SecondaryHeaderLabel = XmlLabeler.GetSecondaryHeaderLabel(node, XmlLabeler.DecideHeaderLabels(node));
+            SecondaryHeaderLabel.Height = RowHeight - 2;
+            SecondaryHeaderLabel.FontSize = fontSize;
+            SecondaryHeaderLabel.FontWeight = FontWeights.Regular;
+            SecondaryHeaderLabel.Margin = new Thickness(0, 0, 12, 0);
 
             var ButtonSwapComponent = new Button
             {
@@ -209,8 +163,8 @@ namespace JustEditXml._CONTROLLER
                 Margin = new Thickness(5, 0, 5, 0)
             };
             rowPanel.Children.Add(lineIndex);
-            rowPanel.Children.Add(namedXmlLabel);
-            rowPanel.Children.Add(rawXmlLabel);
+            rowPanel.Children.Add(PrimaryHeaderLabel);
+            rowPanel.Children.Add(SecondaryHeaderLabel);
             rowPanel.Children.Add(ButtonSwapComponent);
             return rowPanel;
         }

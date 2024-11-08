@@ -64,6 +64,7 @@
     <Compile Include="_CONTROLLER\XmlFileEditorAvalonEdit.cs" />
     <Compile Include="_CONTROLLER\XmlFileEditorBase.cs" />
     <Compile Include="_MODEL\BoundXmlNode.cs" />
+    <Compile Include="_MODEL\XmlLabeler.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

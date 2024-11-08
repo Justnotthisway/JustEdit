@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<adf extension=".wtunec" endian="Little" comment="SnowflakeTypes.adf in SnowflakeTypes 1.0.0&#xA;pfx.adf in PfxUtils 0.28.0.1&#xA;WeaponTuningSettings_adf.adf in  ">
+    <type-definitions WARNING="DO NOT TOUCH THAT FUCKING THING">
+        <type type="Structure" size="192" alignment="8" name="FiringModuleTuning" name-hash="4029299829" flags="32768" length="0" eltypehash="0">
+            <member name="missile_module" type-hash="2220385112" size="8" offset="0" deftype="0" defval="0" />
+            <member name="grenade_module" type-hash="1386392518" size="8" offset="16" deftype="0" defval="0" />
+            <member name="bullet_module" type-hash="390993923" size="8" offset="32" deftype="0" defval="0" />
+            <member name="fow_module" type-hash="3032890888" size="8" offset="48" deftype="0" defval="0" />
+            <member name="projectile_explosive_module" type-hash="1286456150" size="8" offset="64" deftype="0" defval="0" />
+            <member name="drone_launcher_module" type-hash="2207947441" size="8" offset="80" deftype="0" defval="0" />
+            <member name="barrage_module" type-hash="1557627300" size="8" offset="96" deftype="0" defval="0" />
+            <member name="magazine_size" type-hash="422569523" size="4" offset="112" deftype="1" defval="12" />
+            <member name="max_range" type-hash="1964352007" size="4" offset="116" deftype="1" defval="1133903872" />
+            <member name="reload_time_scale" type-hash="1964352007" size="4" offset="120" deftype="1" defval="1065353216" />
+            <member name="reload_time_no_anim" type-hash="1964352007" size="4" offset="124" deftype="1" defval="1069547520" />
+            <member name="velocity" type-hash="1964352007" size="4" offset="128" deftype="1" defval="1120403456" />
+            <member name="velocity_ai_scale" type-hash="1964352007" size="4" offset="132" deftype="1" defval="1065353216" />
+            <member name="fire_rate" type-hash="1964352007" size="4" offset="136" deftype="1" defval="1039516303" />
+            <member name="burst_count" type-hash="211976733" size="1" offset="140" deftype="1" defval="1" />
+            <member name="burst_cooldown" type-hash="1964352007" size="4" offset="144" deftype="1" defval="0" />
+            <member name="should_take_ammo_per_projectile" type-hash="211976733" size="1" offset="148" deftype="1" defval="0" />
+            <member name="fully_automatic" type-hash="211976733" size="1" offset="149" deftype="1" defval="0" />
+            <member name="trigger_sensitivity" type-hash="2752192426" size="4" offset="152" deftype="2" defval="4063774364" />
+            <member name="aim_timer_override" type-hash="1964352007" size="4" offset="160" deftype="1" defval="3212836864" />
+            <member name="UISettings" type-hash="2139250864" size="4" offset="164" deftype="0" defval="0" />
+            <member name="unlimited_ammo" type-hash="211976733" size="1" offset="184" deftype="1" defval="0" />
+        </type>
+        <type type="Array" size="16" alignment="8" name="A[FiringModuleMissileTunings]" name-hash="2220385112" flags="32768" length="0" eltypehash="4256386569" />
+        <type type="Structure" size="548" alignment="4" name="FiringModuleMissileTunings" name-hash="4256386569" flags="32769" length="0" eltypehash="0">
+            <member name="tuning" type-hash="141655324" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_tuning" type-hash="3452050376" size="4" offset="228" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="228" alignment="4" name="FiringModuleMissileTuning" name-hash="141655324" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="missile_base_tuning" type-hash="2873207296" size="4" offset="160" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="160" alignment="4" name="FiringModuleTuningBase" name-hash="2136347230" flags="32771" length="0" eltypehash="0">
+            <member name="impulse" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1092616192" />
+            <member name="vehicle_damage_factor" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1056964608" />
+            <member name="vehicle_impulse_factor" type-hash="1964352007" size="4" offset="8" deftype="1" defval="1045220557" />
+            <member name="object_damage_factor" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1065353216" />
+            <member name="object_impulse_factor" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1065353216" />
+            <member name="damage" type-hash="1964352007" size="4" offset="20" deftype="1" defval="1106247680" />
+            <member name="recoil" type-hash="1181029931" size="4" offset="24" deftype="2" defval="424537053" />
+            <member name="scatter" type-hash="1437783250" size="4" offset="60" deftype="2" defval="4063401468" />
+            <member name="shake" type-hash="1018048308" size="4" offset="104" deftype="2" defval="1867726573" />
+            <member name="rumble" type-hash="2879290038" size="4" offset="132" deftype="2" defval="196952753" />
+            <member name="mounted_input" type-hash="3055236693" size="4" offset="140" deftype="2" defval="3534103282" />
+        </type>
+        <type type="Structure" size="36" alignment="4" name="RecoilSettings" name-hash="1181029931" flags="32771" length="0" eltypehash="0">
+            <member name="recoil_yaw" type-hash="2752192426" size="4" offset="0" deftype="2" defval="292628091" />
+            <member name="recoil_pitch" type-hash="2752192426" size="4" offset="8" deftype="2" defval="1422420568" />
+            <member name="recoil_first_shot_multiplier" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1065353216" />
+            <member name="recoil_precision_aim_multiplier" type-hash="1964352007" size="4" offset="20" deftype="1" defval="1065353216" />
+            <member name="recoil_recover_percentage" type-hash="1964352007" size="4" offset="24" deftype="1" defval="1061158912" />
+            <member name="recoil_recover_speed" type-hash="1964352007" size="4" offset="28" deftype="1" defval="0" />
+            <member name="recoil_recover_reset_time" type-hash="1964352007" size="4" offset="32" deftype="1" defval="1073741824" />
+        </type>
+        <type type="InlineArray" size="8" alignment="4" name="IA[float]" name-hash="2752192426" flags="32771" length="2" eltypehash="1964352007" />
+        <type type="Structure" size="44" alignment="4" name="ScatterSettings" name-hash="1437783250" flags="32771" length="0" eltypehash="0">
+            <member name="scatter_minimum" type-hash="1964352007" size="4" offset="0" deftype="1" defval="0" />
+            <member name="scatter_maximum" type-hash="1964352007" size="4" offset="4" deftype="1" defval="0" />
+            <member name="scatter_per_shot" type-hash="1964352007" size="4" offset="8" deftype="1" defval="0" />
+            <member name="scatter_multiplier_movement" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1065353216" />
+            <member name="scatter_multiplier_aiming" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1065353216" />
+            <member name="scatter_recover_rate" type-hash="1964352007" size="4" offset="20" deftype="1" defval="0" />
+            <member name="scatter_reset_time" type-hash="1964352007" size="4" offset="24" deftype="1" defval="1073741824" />
+            <member name="scatter_clamp_horizontal" type-hash="2752192426" size="4" offset="28" deftype="2" defval="1228407615" />
+            <member name="scatter_clamp_vertical" type-hash="2752192426" size="4" offset="36" deftype="2" defval="2187599689" />
+        </type>
+        <type type="Structure" size="28" alignment="4" name="ShakeSettings" name-hash="1018048308" flags="32771" length="0" eltypehash="0">
+            <member name="shake_type" type-hash="123620943" size="4" offset="0" deftype="1" defval="0" />
+            <member name="shake_frequency" type-hash="1964352007" size="4" offset="4" deftype="1" defval="0" />
+            <member name="shake_time" type-hash="1964352007" size="4" offset="8" deftype="1" defval="0" />
+            <member name="shake_falloff" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1065353216" />
+            <member name="shake_amplitude" type-hash="3897827182" size="4" offset="16" deftype="2" defval="3202626246" />
+        </type>
+        <type type="InlineArray" size="12" alignment="4" name="IA[float]" name-hash="3897827182" flags="32775" length="3" eltypehash="1964352007" />
+        <type type="Structure" size="8" alignment="4" name="RumbleSettings" name-hash="2879290038" flags="32771" length="0" eltypehash="0">
+            <member name="rumble_time" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1045220557" />
+            <member name="rumble_strength" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1056964608" />
+        </type>
+        <type type="Structure" size="20" alignment="4" name="MountedWeaponInputSettings" name-hash="3055236693" flags="32771" length="0" eltypehash="0">
+            <member name="direct_speed" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1065353216" />
+            <member name="direct_speed_exponential" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1065353216" />
+            <member name="accel_exponential" type-hash="1964352007" size="4" offset="8" deftype="1" defval="1065353216" />
+            <member name="top_speed" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1082130432" />
+            <member name="acc_period" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1056964608" />
+        </type>
+        <type type="Structure" size="68" alignment="4" name="FiringModuleMissileTuningBase" name-hash="2873207296" flags="32769" length="0" eltypehash="0">
+            <member name="missile_uses_proportional_navigation" type-hash="123620943" size="4" offset="0" deftype="1" defval="0" />
+            <member name="missile_acceleration_time" type-hash="2752192426" size="4" offset="4" deftype="2" defval="2912304552" />
+            <member name="missile_acceleration" type-hash="2752192426" size="4" offset="12" deftype="2" defval="3944716604" />
+            <member name="missile_acceleration_random" type-hash="2752192426" size="4" offset="20" deftype="2" defval="3937185178" />
+            <member name="missile_turning_speed" type-hash="1964352007" size="4" offset="28" deftype="1" defval="1101004800" />
+            <member name="missile_turning_speed_random" type-hash="1964352007" size="4" offset="32" deftype="1" defval="0" />
+            <member name="missile_no_turning_time" type-hash="1964352007" size="4" offset="36" deftype="1" defval="0" />
+            <member name="missile_detonation_time" type-hash="1964352007" size="4" offset="40" deftype="1" defval="3212836864" />
+            <member name="missile_detonation_time_random" type-hash="1964352007" size="4" offset="44" deftype="1" defval="0" />
+            <member name="missile_per_shot" type-hash="211976733" size="1" offset="48" deftype="1" defval="1" />
+            <member name="missile_loose_lock_distance" type-hash="1964352007" size="4" offset="52" deftype="1" defval="0" />
+            <member name="missile_loose_lock_dot" type-hash="1964352007" size="4" offset="56" deftype="1" defval="3212836864" />
+            <member name="detonate_on_impact" type-hash="211976733" size="1" offset="60" deftype="1" defval="1" />
+            <member name="gravity" type-hash="1964352007" size="4" offset="64" deftype="1" defval="3239911096" />
+        </type>
+        <type type="Structure" size="320" alignment="4" name="FiringModuleMissileAITuning" name-hash="3452050376" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_base_tuning" type-hash="4292300317" size="4" offset="160" deftype="0" defval="0" />
+            <member name="missile_base_tuning" type-hash="2873207296" size="4" offset="252" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="92" alignment="4" name="FiringModuleAITuningBase" name-hash="4292300317" flags="32771" length="0" eltypehash="0">
+            <member name="threat_value" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1092616192" />
+            <member name="optimal_range" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1101004800" />
+            <member name="range" type-hash="2752192426" size="4" offset="8" deftype="2" defval="1608168153" />
+            <member name="retreat_range" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1084227584" />
+            <member name="melee_range" type-hash="1964352007" size="4" offset="20" deftype="1" defval="1073741824" />
+            <member name="priority_holder_damage_scale" type-hash="1964352007" size="4" offset="24" deftype="1" defval="1065353216" />
+            <member name="character_target_priority" type-hash="1964352007" size="4" offset="28" deftype="1" defval="1065353216" />
+            <member name="land_vehicle_target_priority" type-hash="1964352007" size="4" offset="32" deftype="1" defval="1065353216" />
+            <member name="sea_vehicle_target_priority" type-hash="1964352007" size="4" offset="36" deftype="1" defval="1065353216" />
+            <member name="air_vehicle_target_priority" type-hash="1964352007" size="4" offset="40" deftype="1" defval="1065353216" />
+            <member name="tank_target_priority" type-hash="1964352007" size="4" offset="44" deftype="1" defval="1065353216" />
+            <member name="rpg_target_priority" type-hash="1964352007" size="4" offset="48" deftype="1" defval="1065353216" />
+            <member name="sniper_target_priority" type-hash="1964352007" size="4" offset="52" deftype="1" defval="1065353216" />
+            <member name="mounted_gun_target_priority" type-hash="1964352007" size="4" offset="56" deftype="1" defval="1065353216" />
+            <member name="machine_gun_priority" type-hash="1964352007" size="4" offset="60" deftype="1" defval="1065353216" />
+            <member name="character_targeting_range_override" type-hash="1964352007" size="4" offset="64" deftype="1" defval="0" />
+            <member name="land_vehicle_targeting_range_override" type-hash="1964352007" size="4" offset="68" deftype="1" defval="0" />
+            <member name="sea_vehicle_targeting_range_override" type-hash="1964352007" size="4" offset="72" deftype="1" defval="0" />
+            <member name="air_vehicle_targeting_range_override" type-hash="1964352007" size="4" offset="76" deftype="1" defval="0" />
+            <member name="other_targeting_range_override" type-hash="1964352007" size="4" offset="80" deftype="1" defval="0" />
+            <member name="dropped_magazines" type-hash="2877564036" size="4" offset="84" deftype="2" defval="1536540891" />
+        </type>
+        <type type="InlineArray" size="8" alignment="4" name="IA[int32]" name-hash="2877564036" flags="32771" length="2" eltypehash="422569523" />
+        <type type="Array" size="16" alignment="8" name="A[FiringModuleGrenadeTunings]" name-hash="1386392518" flags="32768" length="0" eltypehash="2039123136" />
+        <type type="Structure" size="624" alignment="4" name="FiringModuleGrenadeTunings" name-hash="2039123136" flags="32769" length="0" eltypehash="0">
+            <member name="tuning" type-hash="2179325612" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_tuning" type-hash="2649663649" size="4" offset="300" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="300" alignment="4" name="FiringModuleGrenadeTuning" name-hash="2179325612" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="grenade_base_tuning" type-hash="1232558834" size="4" offset="160" deftype="0" defval="0" />
+            <member name="planted_engine_tuning" type-hash="2672912832" size="4" offset="212" deftype="0" defval="0" />
+            <member name="grenade_mod_tuning" type-hash="3851800577" size="4" offset="236" deftype="0" defval="0" />
+            <member name="smart_bounce_range" type-hash="1964352007" size="4" offset="292" deftype="1" defval="1073741824" />
+            <member name="smart_bounce_max_accel" type-hash="1964352007" size="4" offset="296" deftype="1" defval="1120403456" />
+        </type>
+        <type type="Structure" size="52" alignment="4" name="FiringModuleGrenadeTuningBase" name-hash="1232558834" flags="32771" length="0" eltypehash="0">
+            <member name="detonation_time" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1092616192" />
+            <member name="initial_angular_velocity" type-hash="3897827182" size="4" offset="4" deftype="2" defval="1621135931" />
+            <member name="arc_tuning" type-hash="956826046" size="4" offset="16" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="36" alignment="4" name="GrenadeArcTuning" name-hash="956826046" flags="32771" length="0" eltypehash="0">
+            <member name="max_distance_for_blend" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1115815936" />
+            <member name="t_flat" type-hash="2752192426" size="4" offset="4" deftype="2" defval="2129347333" />
+            <member name="t_up" type-hash="2752192426" size="4" offset="12" deftype="2" defval="3126058721" />
+            <member name="t_down" type-hash="2752192426" size="4" offset="20" deftype="2" defval="1646129097" />
+            <member name="angle_up_max" type-hash="1964352007" size="4" offset="28" deftype="1" defval="1067869798" />
+            <member name="angle_down_max" type-hash="1964352007" size="4" offset="32" deftype="1" defval="3212836864" />
+        </type>
+        <type type="Structure" size="24" alignment="4" name="PlantedEngineTuning" name-hash="2672912832" flags="32771" length="0" eltypehash="0">
+            <member name="level_1_burn_time" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1084227584" />
+            <member name="level_1_velocity" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1120403456" />
+            <member name="level_1_pressure" type-hash="1964352007" size="4" offset="8" deftype="1" defval="1120403456" />
+            <member name="level_2_burn_time" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1084227584" />
+            <member name="level_2_velocity" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1120403456" />
+            <member name="level_2_pressure" type-hash="1964352007" size="4" offset="20" deftype="1" defval="1120403456" />
+        </type>
+        <type type="Structure" size="56" alignment="4" name="GrenadeMODTuning" name-hash="3851800577" flags="32769" length="0" eltypehash="0">
+            <member name="homing_level_1" type-hash="531852448" size="4" offset="0" deftype="0" defval="0" />
+            <member name="homing_level_2" type-hash="531852448" size="4" offset="20" deftype="0" defval="0" />
+            <member name="smart_fuse_range" type-hash="1964352007" size="4" offset="40" deftype="1" defval="1084227584" />
+            <member name="smart_fuse_multiplier_away" type-hash="1964352007" size="4" offset="44" deftype="1" defval="1086324736" />
+            <member name="smart_fuse_multiplier_toward" type-hash="1964352007" size="4" offset="48" deftype="1" defval="1073741824" />
+            <member name="slow_fuse_multiplier" type-hash="1964352007" size="4" offset="52" deftype="1" defval="1056964608" />
+        </type>
+        <type type="Structure" size="20" alignment="4" name="HomingGrenadeTuning" name-hash="531852448" flags="32769" length="0" eltypehash="0">
+            <member name="range_initial_from_target" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1092616192" />
+            <member name="range_continuous_forward" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1092616192" />
+            <member name="range_continuous_y" type-hash="1964352007" size="4" offset="8" deftype="1" defval="3212836864" />
+            <member name="max_accel" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1132068864" />
+            <member name="draw_debug" type-hash="211976733" size="1" offset="16" deftype="1" defval="0" />
+        </type>
+        <type type="Structure" size="324" alignment="4" name="FiringModuleGrenadeAITuning" name-hash="2649663649" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_base_tuning" type-hash="4292300317" size="4" offset="160" deftype="0" defval="0" />
+            <member name="grenade_base_tuning" type-hash="1232558834" size="4" offset="252" deftype="0" defval="0" />
+            <member name="aim_center_upscreen_distance" type-hash="1964352007" size="4" offset="304" deftype="1" defval="1069547520" />
+            <member name="aim_randomization_radius" type-hash="1964352007" size="4" offset="308" deftype="1" defval="1073741824" />
+            <member name="aim_exclusion_radius" type-hash="1964352007" size="4" offset="312" deftype="1" defval="1056964608" />
+            <member name="aim_offset_y" type-hash="1964352007" size="4" offset="316" deftype="1" defval="3204448256" />
+            <member name="debug_aim_target" type-hash="211976733" size="1" offset="320" deftype="1" defval="0" />
+        </type>
+        <type type="Array" size="16" alignment="8" name="A[FiringModuleBulletTunings]" name-hash="390993923" flags="32768" length="0" eltypehash="952102026" />
+        <type type="Structure" size="604" alignment="4" name="FiringModuleBulletTunings" name-hash="952102026" flags="32769" length="0" eltypehash="0">
+            <member name="tuning" type-hash="2342901938" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_tuning" type-hash="1356209276" size="4" offset="260" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="260" alignment="4" name="FiringModuleBulletTuning" name-hash="2342901938" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="bullet_base_tuning" type-hash="1782120285" size="4" offset="160" deftype="0" defval="0" />
+            <member name="headshot_multiplier" type-hash="1964352007" size="4" offset="252" deftype="1" defval="1067450368" />
+            <member name="bullet_is_explosive" type-hash="211976733" size="1" offset="256" deftype="1" defval="0" />
+        </type>
+        <type type="Structure" size="92" alignment="4" name="FiringModuleBulletTuningBase" name-hash="1782120285" flags="32769" length="0" eltypehash="0">
+            <member name="tracer_fire_velocity" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1123024896" />
+            <member name="tracer_fire_length" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1092616192" />
+            <member name="tracer_fire_width" type-hash="1964352007" size="4" offset="8" deftype="1" defval="1073741824" />
+            <member name="tracer_expand_width" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1073741824" />
+            <member name="tracer_time_to_live" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1065353216" />
+            <member name="tracer_min_dist_from_start" type-hash="1964352007" size="4" offset="20" deftype="1" defval="0" />
+            <member name="ricochet_chance" type-hash="1964352007" size="4" offset="24" deftype="1" defval="1036831949" />
+            <member name="ricochet_min_angle_override" type-hash="1964352007" size="4" offset="28" deftype="1" defval="0" />
+            <member name="ricochet_rand_angle_pitch" type-hash="1964352007" size="4" offset="32" deftype="1" defval="1039516303" />
+            <member name="ricochet_rand_angle_yaw" type-hash="1964352007" size="4" offset="36" deftype="1" defval="1054615798" />
+            <member name="ricochet_on_game_objects" type-hash="211976733" size="1" offset="40" deftype="1" defval="1" />
+            <member name="ricochet_on_static_objects" type-hash="211976733" size="1" offset="41" deftype="1" defval="0" />
+            <member name="smoke_trail_tile_size" type-hash="1964352007" size="4" offset="44" deftype="1" defval="1084227584" />
+            <member name="smoke_trail_color" type-hash="1401347360" size="4" offset="48" deftype="2" defval="2533592336" />
+            <member name="bullet_trail_color" type-hash="1401347360" size="4" offset="64" deftype="2" defval="2552688741" />
+            <member name="tracer_per_smoke_trail" type-hash="211976733" size="1" offset="80" deftype="1" defval="1" />
+            <member name="bullets_per_tracer" type-hash="211976733" size="1" offset="81" deftype="1" defval="1" />
+            <member name="bullets_per_shot" type-hash="211976733" size="1" offset="82" deftype="1" defval="1" />
+            <member name="ricochet_count" type-hash="211976733" size="1" offset="83" deftype="1" defval="0" />
+            <member name="tracer_texture_type" type-hash="211976733" size="1" offset="84" deftype="1" defval="0" />
+            <member name="gravity_on" type-hash="211976733" size="1" offset="85" deftype="1" defval="0" />
+            <member name="gravity_strength" type-hash="1964352007" size="4" offset="88" deftype="1" defval="1092427448" />
+        </type>
+        <type type="InlineArray" size="16" alignment="4" name="IA[float]" name-hash="1401347360" flags="32775" length="4" eltypehash="1964352007" />
+        <type type="Structure" size="344" alignment="4" name="FiringModuleBulletAITuning" name-hash="1356209276" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_base_tuning" type-hash="4292300317" size="4" offset="160" deftype="0" defval="0" />
+            <member name="bullet_base_tuning" type-hash="1782120285" size="4" offset="252" deftype="0" defval="0" />
+        </type>
+        <type type="Array" size="16" alignment="8" name="A[FiringModuleFOWTunings]" name-hash="3032890888" flags="32768" length="0" eltypehash="1673628615" />
+        <type type="Structure" size="528" alignment="4" name="FiringModuleFOWTunings" name-hash="1673628615" flags="32769" length="0" eltypehash="0">
+            <member name="tuning" type-hash="2306401442" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_tuning" type-hash="3032916654" size="4" offset="276" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="276" alignment="4" name="FiringModuleFOWTuning" name-hash="2306401442" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="2" defval="2730632225" />
+            <member name="sunbeam_tuning" type-hash="4014009800" size="4" offset="160" deftype="2" defval="1064851529" />
+            <member name="typhoon_tunings" type-hash="2140586752" size="4" offset="188" deftype="2" defval="749405656" />
+            <member name="namaste_tuning" type-hash="822949725" size="4" offset="228" deftype="2" defval="77518841" />
+            <member name="stupka_tuning" type-hash="2587550804" size="4" offset="236" deftype="2" defval="1176314232" />
+            <member name="missile_strike_tuning" type-hash="3446380848" size="4" offset="244" deftype="2" defval="3887071614" />
+        </type>
+        <type type="Structure" size="28" alignment="4" name="FiringModuleSunBeamTuning" name-hash="4014009800" flags="32771" length="0" eltypehash="0">
+            <member name="beam_speed" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1077936128" />
+            <member name="beam_radius" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1069547520" />
+            <member name="beam_target_time" type-hash="1964352007" size="4" offset="8" deftype="1" defval="1073741824" />
+            <member name="beam_duration" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1082130432" />
+            <member name="beam_anti_gravity_force" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1148846080" />
+            <member name="beam_anti_gravity_max_velocity" type-hash="1964352007" size="4" offset="20" deftype="1" defval="1065353216" />
+            <member name="beam_force" type-hash="1964352007" size="4" offset="24" deftype="1" defval="1128792064" />
+        </type>
+        <type type="Structure" size="40" alignment="4" name="FiringModuleTyphoonTunings" name-hash="2140586752" flags="32769" length="0" eltypehash="0">
+            <member name="character_tuning" type-hash="3446824236" size="4" offset="0" deftype="2" defval="1735738725" />
+            <member name="object_tuning" type-hash="3446824236" size="4" offset="12" deftype="2" defval="62205837" />
+            <member name="typhoon_tuning_base" type-hash="4281812425" size="4" offset="24" deftype="2" defval="3606946580" />
+        </type>
+        <type type="Structure" size="12" alignment="4" name="FiringModuleTyphoonTuning" name-hash="3446824236" flags="32771" length="0" eltypehash="0">
+            <member name="velocity" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1120403456" />
+            <member name="pressure" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1140457472" />
+            <member name="damage" type-hash="422569523" size="4" offset="8" deftype="1" defval="500" />
+        </type>
+        <type type="Structure" size="16" alignment="4" name="FiringModuleTyphoonTuningBase" name-hash="4281812425" flags="32769" length="0" eltypehash="0">
+            <member name="ammo_per_trace" type-hash="211976733" size="1" offset="0" deftype="1" defval="1" />
+            <member name="force_length" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1106247680" />
+            <member name="force_start_radius" type-hash="1964352007" size="4" offset="8" deftype="1" defval="1056964608" />
+            <member name="force_end_radius" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1092616192" />
+        </type>
+        <type type="Structure" size="8" alignment="4" name="FiringModuleNamasteTuning" name-hash="822949725" flags="32771" length="0" eltypehash="0">
+            <member name="laser_trip_wire_length" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1106247680" />
+            <member name="gravity_strength" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1092427448" />
+        </type>
+        <type type="Structure" size="8" alignment="4" name="FiringModuleStupkaTuning" name-hash="2587550804" flags="32771" length="0" eltypehash="0">
+            <member name="aim_down_max_angle" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1106247680" />
+            <member name="aim_up_max_angle" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1106247680" />
+        </type>
+        <type type="Structure" size="32" alignment="4" name="FiringModuleMissileStrikeTuning" name-hash="3446380848" flags="32769" length="0" eltypehash="0">
+            <member name="target_radius" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1069547520" />
+            <member name="fire_amount" type-hash="211976733" size="1" offset="4" deftype="1" defval="15" />
+            <member name="missile_acceleration_time" type-hash="2752192426" size="4" offset="8" deftype="2" defval="3583889359" />
+            <member name="missile_acceleration" type-hash="2752192426" size="4" offset="16" deftype="2" defval="3715501723" />
+            <member name="missile_acceleration_random" type-hash="2752192426" size="4" offset="24" deftype="2" defval="667052715" />
+        </type>
+        <type type="Structure" size="252" alignment="4" name="FiringModuleFOWAITuning" name-hash="3032916654" flags="32771" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_base_tuning" type-hash="4292300317" size="4" offset="160" deftype="0" defval="0" />
+        </type>
+        <type type="Array" size="16" alignment="8" name="A[FiringModuleProjectileExplosiveTunings]" name-hash="1286456150" flags="32768" length="0" eltypehash="2422372943" />
+        <type type="Structure" size="420" alignment="4" name="FiringModuleProjectileExplosiveTunings" name-hash="2422372943" flags="32771" length="0" eltypehash="0">
+            <member name="tuning" type-hash="1358841940" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_tuning" type-hash="3946705002" size="4" offset="164" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="164" alignment="4" name="FiringModuleProjectileExplosiveTuning" name-hash="1358841940" flags="32771" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="projectile_explosive_base_tuning" type-hash="1093595754" size="4" offset="160" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="4" alignment="4" name="FiringModuleProjectileExplosiveTuningBase" name-hash="1093595754" flags="32771" length="0" eltypehash="0">
+            <member name="gravity_factor" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1092427448" />
+        </type>
+        <type type="Structure" size="256" alignment="4" name="FiringModuleProjectileExplosiveAITuning" name-hash="3946705002" flags="32771" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_base_tuning" type-hash="4292300317" size="4" offset="160" deftype="0" defval="0" />
+            <member name="projectile_explosive_base_tuning" type-hash="1093595754" size="4" offset="252" deftype="0" defval="0" />
+        </type>
+        <type type="Array" size="16" alignment="8" name="A[FiringModuleDroneLauncherTunings]" name-hash="2207947441" flags="32768" length="0" eltypehash="1147011979" />
+        <type type="Structure" size="436" alignment="4" name="FiringModuleDroneLauncherTunings" name-hash="1147011979" flags="32771" length="0" eltypehash="0">
+            <member name="tuning" type-hash="1648532980" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_tuning" type-hash="144658326" size="4" offset="172" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="172" alignment="4" name="FiringModuleDroneLauncherTuning" name-hash="1648532980" flags="32771" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="drone_launcher_base_tuning" type-hash="2280562335" size="4" offset="160" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="12" alignment="4" name="FiringModuleDroneLauncherTuningBase" name-hash="2280562335" flags="32771" length="0" eltypehash="0">
+            <member name="drone_spawn_min_distance" type-hash="1964352007" size="4" offset="0" deftype="1" defval="1077936128" />
+            <member name="drone_spawn_max_distance" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1092616192" />
+            <member name="gravity" type-hash="1964352007" size="4" offset="8" deftype="1" defval="3239911096" />
+        </type>
+        <type type="Structure" size="264" alignment="4" name="FiringModuleDroneLauncherAITuning" name-hash="144658326" flags="32771" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_base_tuning" type-hash="4292300317" size="4" offset="160" deftype="0" defval="0" />
+            <member name="drone_launcher_base_tuning" type-hash="2280562335" size="4" offset="252" deftype="0" defval="0" />
+        </type>
+        <type type="Array" size="16" alignment="8" name="A[FiringModuleBarrageTunings]" name-hash="1557627300" flags="32768" length="0" eltypehash="166500581" />
+        <type type="Structure" size="476" alignment="4" name="FiringModuleBarrageTunings" name-hash="166500581" flags="32769" length="0" eltypehash="0">
+            <member name="tuning" type-hash="3228081263" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_tuning" type-hash="3837764043" size="4" offset="192" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="192" alignment="4" name="FiringModuleBarrageTuning" name-hash="3228081263" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="barrage_base_tuning" type-hash="3704852395" size="4" offset="160" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="32" alignment="4" name="FiringModuleBarrageTuningBase" name-hash="3704852395" flags="32769" length="0" eltypehash="0">
+            <member name="barrage_per_shot" type-hash="211976733" size="1" offset="0" deftype="1" defval="1" />
+            <member name="barrage_time_upward" type-hash="1964352007" size="4" offset="4" deftype="1" defval="1086324736" />
+            <member name="barrage_time_between_downward" type-hash="1964352007" size="4" offset="8" deftype="1" defval="1056964608" />
+            <member name="barrage_light_fade_in_time" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1056964608" />
+            <member name="barrage_light_time_enabled_before_drop" type-hash="1964352007" size="4" offset="16" deftype="1" defval="1069547520" />
+            <member name="barrage_light_time_between_enables" type-hash="1964352007" size="4" offset="20" deftype="1" defval="1048576000" />
+            <member name="barrage_starting_height" type-hash="1964352007" size="4" offset="24" deftype="1" defval="1128792064" />
+            <member name="barrage_randomization_odds" type-hash="1964352007" size="4" offset="28" deftype="1" defval="1048576000" />
+        </type>
+        <type type="Structure" size="284" alignment="4" name="FiringModuleBarrageAITuning" name-hash="3837764043" flags="32769" length="0" eltypehash="0">
+            <member name="base_tuning" type-hash="2136347230" size="4" offset="0" deftype="0" defval="0" />
+            <member name="ai_base_tuning" type-hash="4292300317" size="4" offset="160" deftype="0" defval="0" />
+            <member name="barrage_base_tuning" type-hash="3704852395" size="4" offset="252" deftype="0" defval="0" />
+        </type>
+        <type type="Structure" size="20" alignment="4" name="UISettings" name-hash="2139250864" flags="32771" length="0" eltypehash="0">
+            <member name="scatter_at_smallest" type-hash="1964352007" size="4" offset="0" deftype="1" defval="0" />
+            <member name="scatter_at_biggest" type-hash="1964352007" size="4" offset="4" deftype="1" defval="990057071" />
+            <member name="reticle_size_smallest" type-hash="1964352007" size="4" offset="8" deftype="1" defval="0" />
+            <member name="reticle_size_biggest" type-hash="1964352007" size="4" offset="12" deftype="1" defval="1065353216" />
+            <member name="reticle_offset_in_fov_fraction" type-hash="1964352007" size="4" offset="16" deftype="1" defval="0" />
+        </type>
+    </type-definitions>
+    <instances NOTE="HERE YOU CAN TOUCH, BUT BE GENTLE">
+        <instance name="wpn_070_glauncher_primary.wtune" name-hash="4251715891" type="Structure" type-hash="4029299829" type-name="FiringModuleTuning">
+            <member name="wpn_070_glauncher_primary.wtune" gbltype="Structure" id="0" type-hash="4029299829" type="FiringModuleTuning">
+                <member name="missile_module" gbltype="Array" is-reference="yay" id="-1" type-hash="2220385112" type="A[FiringModuleMissileTunings]" />
+                <member name="grenade_module" gbltype="Array" is-reference="yay" id="1" type-hash="1386392518" type="A[FiringModuleGrenadeTunings]" />
+                <member name="bullet_module" gbltype="Array" is-reference="yay" id="-1" type-hash="390993923" type="A[FiringModuleBulletTunings]" />
+                <member name="fow_module" gbltype="Array" is-reference="yay" id="-1" type-hash="3032890888" type="A[FiringModuleFOWTunings]" />
+                <member name="projectile_explosive_module" gbltype="Array" is-reference="yay" id="-1" type-hash="1286456150" type="A[FiringModuleProjectileExplosiveTunings]" />
+                <member name="drone_launcher_module" gbltype="Array" is-reference="yay" id="-1" type-hash="2207947441" type="A[FiringModuleDroneLauncherTunings]" />
+                <member name="barrage_module" gbltype="Array" is-reference="yay" id="-1" type-hash="1557627300" type="A[FiringModuleBarrageTunings]" />
+                <member name="magazine_size" gbltype="Primitive" offset-in-file="00000120" type="int32">6</member>
+                <member name="max_range" gbltype="Primitive" offset-in-file="00000124" type="float">100</member>
+                <member name="reload_time_scale" gbltype="Primitive" offset-in-file="00000128" type="float">1</member>
+                <member name="reload_time_no_anim" gbltype="Primitive" offset-in-file="0000012C" type="float">1.5</member>
+                <member name="velocity" gbltype="Primitive" offset-in-file="00000130" type="float">30</member>
+                <member name="velocity_ai_scale" gbltype="Primitive" offset-in-file="00000134" type="float">1</member>
+                <member name="fire_rate" gbltype="Primitive" offset-in-file="00000138" type="float">0.600000024</member>
+                <member name="burst_count" gbltype="Primitive" offset-in-file="0000013C" type="uint8">0</member>
+                <member name="burst_cooldown" gbltype="Primitive" offset-in-file="00000140" type="float">0</member>
+                <member name="should_take_ammo_per_projectile" gbltype="Primitive" offset-in-file="00000144" type="uint8">0</member>
+                <member name="fully_automatic" gbltype="Primitive" offset-in-file="00000145" type="uint8">0</member>
+                <member name="trigger_sensitivity" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                    <member gbltype="Primitive" offset-in-file="00000148" type="float">0.100000001</member>
+                    <member gbltype="Primitive" offset-in-file="0000014C" type="float">0.0500000007</member>
+                </member>
+                <member name="aim_timer_override" gbltype="Primitive" offset-in-file="00000150" type="float">-1</member>
+                <member name="UISettings" gbltype="Structure" type-hash="2139250864" type="UISettings">
+                    <member name="scatter_at_smallest" gbltype="Primitive" offset-in-file="00000154" type="float">0</member>
+                    <member name="scatter_at_biggest" gbltype="Primitive" offset-in-file="00000158" type="float">0.00200000009</member>
+                    <member name="reticle_size_smallest" gbltype="Primitive" offset-in-file="0000015C" type="float">0</member>
+                    <member name="reticle_size_biggest" gbltype="Primitive" offset-in-file="00000160" type="float">1</member>
+                    <member name="reticle_offset_in_fov_fraction" gbltype="Primitive" offset-in-file="00000164" type="float">0</member>
+                </member>
+                <member name="unlimited_ammo" gbltype="Primitive" offset-in-file="00000168" type="uint8">0</member>
+            </member>
+            <member name="grenade_module" gbltype="Array" id="1" type-hash="1386392518" type="A[FiringModuleGrenadeTunings]">
+                <member gbltype="Structure" type-hash="2039123136" type="FiringModuleGrenadeTunings">
+                    <member name="tuning" gbltype="Structure" type-hash="2179325612" type="FiringModuleGrenadeTuning">
+                        <member name="base_tuning" gbltype="Structure" type-hash="2136347230" type="FiringModuleTuningBase">
+                            <member name="impulse" gbltype="Primitive" offset-in-file="00000178" type="float">750</member>
+                            <member name="vehicle_damage_factor" gbltype="Primitive" offset-in-file="0000017C" type="float">1.35000002</member>
+                            <member name="vehicle_impulse_factor" gbltype="Primitive" offset-in-file="00000180" type="float">0.200000003</member>
+                            <member name="object_damage_factor" gbltype="Primitive" offset-in-file="00000184" type="float">1</member>
+                            <member name="object_impulse_factor" gbltype="Primitive" offset-in-file="00000188" type="float">1</member>
+                            <member name="damage" gbltype="Primitive" offset-in-file="0000018C" type="float">750</member>
+                            <member name="recoil" gbltype="Structure" type-hash="1181029931" type="RecoilSettings">
+                                <member name="recoil_yaw" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="00000190" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="00000194" type="float">0</member>
+                                </member>
+                                <member name="recoil_pitch" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="00000198" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="0000019C" type="float">0</member>
+                                </member>
+                                <member name="recoil_first_shot_multiplier" gbltype="Primitive" offset-in-file="000001A0" type="float">1</member>
+                                <member name="recoil_precision_aim_multiplier" gbltype="Primitive" offset-in-file="000001A4" type="float">1</member>
+                                <member name="recoil_recover_percentage" gbltype="Primitive" offset-in-file="000001A8" type="float">0.75</member>
+                                <member name="recoil_recover_speed" gbltype="Primitive" offset-in-file="000001AC" type="float">0</member>
+                                <member name="recoil_recover_reset_time" gbltype="Primitive" offset-in-file="000001B0" type="float">2</member>
+                            </member>
+                            <member name="scatter" gbltype="Structure" type-hash="1437783250" type="ScatterSettings">
+                                <member name="scatter_minimum" gbltype="Primitive" offset-in-file="000001B4" type="float">0</member>
+                                <member name="scatter_maximum" gbltype="Primitive" offset-in-file="000001B8" type="float">0</member>
+                                <member name="scatter_per_shot" gbltype="Primitive" offset-in-file="000001BC" type="float">0</member>
+                                <member name="scatter_multiplier_movement" gbltype="Primitive" offset-in-file="000001C0" type="float">1</member>
+                                <member name="scatter_multiplier_aiming" gbltype="Primitive" offset-in-file="000001C4" type="float">1</member>
+                                <member name="scatter_recover_rate" gbltype="Primitive" offset-in-file="000001C8" type="float">0</member>
+                                <member name="scatter_reset_time" gbltype="Primitive" offset-in-file="000001CC" type="float">2</member>
+                                <member name="scatter_clamp_horizontal" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000001D0" type="float">-1</member>
+                                    <member gbltype="Primitive" offset-in-file="000001D4" type="float">1</member>
+                                </member>
+                                <member name="scatter_clamp_vertical" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000001D8" type="float">-1</member>
+                                    <member gbltype="Primitive" offset-in-file="000001DC" type="float">1</member>
+                                </member>
+                            </member>
+                            <member name="shake" gbltype="Structure" type-hash="1018048308" type="ShakeSettings">
+                                <member name="shake_type" gbltype="Primitive" offset-in-file="000001E0" type="uint32">0</member>
+                                <member name="shake_frequency" gbltype="Primitive" offset-in-file="000001E4" type="float">0</member>
+                                <member name="shake_time" gbltype="Primitive" offset-in-file="000001E8" type="float">0</member>
+                                <member name="shake_falloff" gbltype="Primitive" offset-in-file="000001EC" type="float">1</member>
+                                <member name="shake_amplitude" gbltype="InlineArray" type-hash="3897827182" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000001F0" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="000001F4" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="000001F8" type="float">0</member>
+                                </member>
+                            </member>
+                            <member name="rumble" gbltype="Structure" type-hash="2879290038" type="RumbleSettings">
+                                <member name="rumble_time" gbltype="Primitive" offset-in-file="000001FC" type="float">0.0799999982</member>
+                                <member name="rumble_strength" gbltype="Primitive" offset-in-file="00000200" type="float">2</member>
+                            </member>
+                            <member name="mounted_input" gbltype="Structure" type-hash="3055236693" type="MountedWeaponInputSettings">
+                                <member name="direct_speed" gbltype="Primitive" offset-in-file="00000204" type="float">1</member>
+                                <member name="direct_speed_exponential" gbltype="Primitive" offset-in-file="00000208" type="float">1</member>
+                                <member name="accel_exponential" gbltype="Primitive" offset-in-file="0000020C" type="float">1</member>
+                                <member name="top_speed" gbltype="Primitive" offset-in-file="00000210" type="float">4</member>
+                                <member name="acc_period" gbltype="Primitive" offset-in-file="00000214" type="float">0.5</member>
+                            </member>
+                        </member>
+                        <member name="grenade_base_tuning" gbltype="Structure" type-hash="1232558834" type="FiringModuleGrenadeTuningBase">
+                            <member name="detonation_time" gbltype="Primitive" offset-in-file="00000218" type="float">1</member>
+                            <member name="initial_angular_velocity" gbltype="InlineArray" type-hash="3897827182" type="IA[float]">
+                                <member gbltype="Primitive" offset-in-file="0000021C" type="float">0</member>
+                                <member gbltype="Primitive" offset-in-file="00000220" type="float">0</member>
+                                <member gbltype="Primitive" offset-in-file="00000224" type="float">0</member>
+                            </member>
+                            <member name="arc_tuning" gbltype="Structure" type-hash="956826046" type="GrenadeArcTuning">
+                                <member name="max_distance_for_blend" gbltype="Primitive" offset-in-file="00000228" type="float">65</member>
+                                <member name="t_flat" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="0000022C" type="float">0.400000006</member>
+                                    <member gbltype="Primitive" offset-in-file="00000230" type="float">2.20000005</member>
+                                </member>
+                                <member name="t_up" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="00000234" type="float">0.600000024</member>
+                                    <member gbltype="Primitive" offset-in-file="00000238" type="float">2.79999995</member>
+                                </member>
+                                <member name="t_down" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="0000023C" type="float">0.300000012</member>
+                                    <member gbltype="Primitive" offset-in-file="00000240" type="float">1.5</member>
+                                </member>
+                                <member name="angle_up_max" gbltype="Primitive" offset-in-file="00000244" type="float">1.29999995</member>
+                                <member name="angle_down_max" gbltype="Primitive" offset-in-file="00000248" type="float">-1</member>
+                            </member>
+                        </member>
+                        <member name="planted_engine_tuning" gbltype="Structure" type-hash="2672912832" type="PlantedEngineTuning">
+                            <member name="level_1_burn_time" gbltype="Primitive" offset-in-file="0000024C" type="float">5</member>
+                            <member name="level_1_velocity" gbltype="Primitive" offset-in-file="00000250" type="float">100</member>
+                            <member name="level_1_pressure" gbltype="Primitive" offset-in-file="00000254" type="float">100</member>
+                            <member name="level_2_burn_time" gbltype="Primitive" offset-in-file="00000258" type="float">5</member>
+                            <member name="level_2_velocity" gbltype="Primitive" offset-in-file="0000025C" type="float">100</member>
+                            <member name="level_2_pressure" gbltype="Primitive" offset-in-file="00000260" type="float">100</member>
+                        </member>
+                        <member name="grenade_mod_tuning" gbltype="Structure" type-hash="3851800577" type="GrenadeMODTuning">
+                            <member name="homing_level_1" gbltype="Structure" type-hash="531852448" type="HomingGrenadeTuning">
+                                <member name="range_initial_from_target" gbltype="Primitive" offset-in-file="00000264" type="float">25</member>
+                                <member name="range_continuous_forward" gbltype="Primitive" offset-in-file="00000268" type="float">10</member>
+                                <member name="range_continuous_y" gbltype="Primitive" offset-in-file="0000026C" type="float">-3</member>
+                                <member name="max_accel" gbltype="Primitive" offset-in-file="00000270" type="float">150</member>
+                                <member name="draw_debug" gbltype="Primitive" offset-in-file="00000274" type="uint8">0</member>
+                            </member>
+                            <member name="homing_level_2" gbltype="Structure" type-hash="531852448" type="HomingGrenadeTuning">
+                                <member name="range_initial_from_target" gbltype="Primitive" offset-in-file="00000278" type="float">50</member>
+                                <member name="range_continuous_forward" gbltype="Primitive" offset-in-file="0000027C" type="float">20</member>
+                                <member name="range_continuous_y" gbltype="Primitive" offset-in-file="00000280" type="float">-6</member>
+                                <member name="max_accel" gbltype="Primitive" offset-in-file="00000284" type="float">400</member>
+                                <member name="draw_debug" gbltype="Primitive" offset-in-file="00000288" type="uint8">0</member>
+                            </member>
+                            <member name="smart_fuse_range" gbltype="Primitive" offset-in-file="0000028C" type="float">5</member>
+                            <member name="smart_fuse_multiplier_away" gbltype="Primitive" offset-in-file="00000290" type="float">6</member>
+                            <member name="smart_fuse_multiplier_toward" gbltype="Primitive" offset-in-file="00000294" type="float">2</member>
+                            <member name="slow_fuse_multiplier" gbltype="Primitive" offset-in-file="00000298" type="float">0.5</member>
+                        </member>
+                        <member name="smart_bounce_range" gbltype="Primitive" offset-in-file="0000029C" type="float">3</member>
+                        <member name="smart_bounce_max_accel" gbltype="Primitive" offset-in-file="000002A0" type="float">100</member>
+                    </member>
+                    <member name="ai_tuning" gbltype="Structure" type-hash="2649663649" type="FiringModuleGrenadeAITuning">
+                        <member name="base_tuning" gbltype="Structure" type-hash="2136347230" type="FiringModuleTuningBase">
+                            <member name="impulse" gbltype="Primitive" offset-in-file="000002A4" type="float">0</member>
+                            <member name="vehicle_damage_factor" gbltype="Primitive" offset-in-file="000002A8" type="float">0.5</member>
+                            <member name="vehicle_impulse_factor" gbltype="Primitive" offset-in-file="000002AC" type="float">0.200000003</member>
+                            <member name="object_damage_factor" gbltype="Primitive" offset-in-file="000002B0" type="float">1</member>
+                            <member name="object_impulse_factor" gbltype="Primitive" offset-in-file="000002B4" type="float">1</member>
+                            <member name="damage" gbltype="Primitive" offset-in-file="000002B8" type="float">1</member>
+                            <member name="recoil" gbltype="Structure" type-hash="1181029931" type="RecoilSettings">
+                                <member name="recoil_yaw" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000002BC" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="000002C0" type="float">0</member>
+                                </member>
+                                <member name="recoil_pitch" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000002C4" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="000002C8" type="float">0</member>
+                                </member>
+                                <member name="recoil_first_shot_multiplier" gbltype="Primitive" offset-in-file="000002CC" type="float">1</member>
+                                <member name="recoil_precision_aim_multiplier" gbltype="Primitive" offset-in-file="000002D0" type="float">1</member>
+                                <member name="recoil_recover_percentage" gbltype="Primitive" offset-in-file="000002D4" type="float">0.75</member>
+                                <member name="recoil_recover_speed" gbltype="Primitive" offset-in-file="000002D8" type="float">0</member>
+                                <member name="recoil_recover_reset_time" gbltype="Primitive" offset-in-file="000002DC" type="float">2</member>
+                            </member>
+                            <member name="scatter" gbltype="Structure" type-hash="1437783250" type="ScatterSettings">
+                                <member name="scatter_minimum" gbltype="Primitive" offset-in-file="000002E0" type="float">0</member>
+                                <member name="scatter_maximum" gbltype="Primitive" offset-in-file="000002E4" type="float">0</member>
+                                <member name="scatter_per_shot" gbltype="Primitive" offset-in-file="000002E8" type="float">0</member>
+                                <member name="scatter_multiplier_movement" gbltype="Primitive" offset-in-file="000002EC" type="float">1</member>
+                                <member name="scatter_multiplier_aiming" gbltype="Primitive" offset-in-file="000002F0" type="float">1</member>
+                                <member name="scatter_recover_rate" gbltype="Primitive" offset-in-file="000002F4" type="float">0</member>
+                                <member name="scatter_reset_time" gbltype="Primitive" offset-in-file="000002F8" type="float">2</member>
+                                <member name="scatter_clamp_horizontal" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000002FC" type="float">-1</member>
+                                    <member gbltype="Primitive" offset-in-file="00000300" type="float">1</member>
+                                </member>
+                                <member name="scatter_clamp_vertical" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="00000304" type="float">-1</member>
+                                    <member gbltype="Primitive" offset-in-file="00000308" type="float">1</member>
+                                </member>
+                            </member>
+                            <member name="shake" gbltype="Structure" type-hash="1018048308" type="ShakeSettings">
+                                <member name="shake_type" gbltype="Primitive" offset-in-file="0000030C" type="uint32">0</member>
+                                <member name="shake_frequency" gbltype="Primitive" offset-in-file="00000310" type="float">0</member>
+                                <member name="shake_time" gbltype="Primitive" offset-in-file="00000314" type="float">0</member>
+                                <member name="shake_falloff" gbltype="Primitive" offset-in-file="00000318" type="float">1</member>
+                                <member name="shake_amplitude" gbltype="InlineArray" type-hash="3897827182" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="0000031C" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="00000320" type="float">0</member>
+                                    <member gbltype="Primitive" offset-in-file="00000324" type="float">0</member>
+                                </member>
+                            </member>
+                            <member name="rumble" gbltype="Structure" type-hash="2879290038" type="RumbleSettings">
+                                <member name="rumble_time" gbltype="Primitive" offset-in-file="00000328" type="float">0</member>
+                                <member name="rumble_strength" gbltype="Primitive" offset-in-file="0000032C" type="float">0</member>
+                            </member>
+                            <member name="mounted_input" gbltype="Structure" type-hash="3055236693" type="MountedWeaponInputSettings">
+                                <member name="direct_speed" gbltype="Primitive" offset-in-file="00000330" type="float">1</member>
+                                <member name="direct_speed_exponential" gbltype="Primitive" offset-in-file="00000334" type="float">1</member>
+                                <member name="accel_exponential" gbltype="Primitive" offset-in-file="00000338" type="float">1</member>
+                                <member name="top_speed" gbltype="Primitive" offset-in-file="0000033C" type="float">4</member>
+                                <member name="acc_period" gbltype="Primitive" offset-in-file="00000340" type="float">0.5</member>
+                            </member>
+                        </member>
+                        <member name="ai_base_tuning" gbltype="Structure" type-hash="4292300317" type="FiringModuleAITuningBase">
+                            <member name="threat_value" gbltype="Primitive" offset-in-file="00000344" type="float">10</member>
+                            <member name="optimal_range" gbltype="Primitive" offset-in-file="00000348" type="float">20</member>
+                            <member name="range" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                <member gbltype="Primitive" offset-in-file="0000034C" type="float">10</member>
+                                <member gbltype="Primitive" offset-in-file="00000350" type="float">100</member>
+                            </member>
+                            <member name="retreat_range" gbltype="Primitive" offset-in-file="00000354" type="float">5</member>
+                            <member name="melee_range" gbltype="Primitive" offset-in-file="00000358" type="float">2</member>
+                            <member name="priority_holder_damage_scale" gbltype="Primitive" offset-in-file="0000035C" type="float">1</member>
+                            <member name="character_target_priority" gbltype="Primitive" offset-in-file="00000360" type="float">1</member>
+                            <member name="land_vehicle_target_priority" gbltype="Primitive" offset-in-file="00000364" type="float">1</member>
+                            <member name="sea_vehicle_target_priority" gbltype="Primitive" offset-in-file="00000368" type="float">1</member>
+                            <member name="air_vehicle_target_priority" gbltype="Primitive" offset-in-file="0000036C" type="float">1</member>
+                            <member name="tank_target_priority" gbltype="Primitive" offset-in-file="00000370" type="float">1</member>
+                            <member name="rpg_target_priority" gbltype="Primitive" offset-in-file="00000374" type="float">1</member>
+                            <member name="sniper_target_priority" gbltype="Primitive" offset-in-file="00000378" type="float">1</member>
+                            <member name="mounted_gun_target_priority" gbltype="Primitive" offset-in-file="0000037C" type="float">1</member>
+                            <member name="machine_gun_priority" gbltype="Primitive" offset-in-file="00000380" type="float">1</member>
+                            <member name="character_targeting_range_override" gbltype="Primitive" offset-in-file="00000384" type="float">0</member>
+                            <member name="land_vehicle_targeting_range_override" gbltype="Primitive" offset-in-file="00000388" type="float">0</member>
+                            <member name="sea_vehicle_targeting_range_override" gbltype="Primitive" offset-in-file="0000038C" type="float">0</member>
+                            <member name="air_vehicle_targeting_range_override" gbltype="Primitive" offset-in-file="00000390" type="float">0</member>
+                            <member name="other_targeting_range_override" gbltype="Primitive" offset-in-file="00000394" type="float">0</member>
+                            <member name="dropped_magazines" gbltype="InlineArray" type-hash="2877564036" type="IA[int32]">
+                                <member gbltype="Primitive" offset-in-file="00000398" type="int32">2</member>
+                                <member gbltype="Primitive" offset-in-file="0000039C" type="int32">3</member>
+                            </member>
+                        </member>
+                        <member name="grenade_base_tuning" gbltype="Structure" type-hash="1232558834" type="FiringModuleGrenadeTuningBase">
+                            <member name="detonation_time" gbltype="Primitive" offset-in-file="000003A0" type="float">1.5</member>
+                            <member name="initial_angular_velocity" gbltype="InlineArray" type-hash="3897827182" type="IA[float]">
+                                <member gbltype="Primitive" offset-in-file="000003A4" type="float">0</member>
+                                <member gbltype="Primitive" offset-in-file="000003A8" type="float">0</member>
+                                <member gbltype="Primitive" offset-in-file="000003AC" type="float">0</member>
+                            </member>
+                            <member name="arc_tuning" gbltype="Structure" type-hash="956826046" type="GrenadeArcTuning">
+                                <member name="max_distance_for_blend" gbltype="Primitive" offset-in-file="000003B0" type="float">70</member>
+                                <member name="t_flat" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000003B4" type="float">1.25</member>
+                                    <member gbltype="Primitive" offset-in-file="000003B8" type="float">2.75</member>
+                                </member>
+                                <member name="t_up" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000003BC" type="float">2</member>
+                                    <member gbltype="Primitive" offset-in-file="000003C0" type="float">4</member>
+                                </member>
+                                <member name="t_down" gbltype="InlineArray" type-hash="2752192426" type="IA[float]">
+                                    <member gbltype="Primitive" offset-in-file="000003C4" type="float">0.75</member>
+                                    <member gbltype="Primitive" offset-in-file="000003C8" type="float">1.5</member>
+                                </member>
+                                <member name="angle_up_max" gbltype="Primitive" offset-in-file="000003CC" type="float">1</member>
+                                <member name="angle_down_max" gbltype="Primitive" offset-in-file="000003D0" type="float">-1</member>
+                            </member>
+                        </member>
+                        <member name="aim_center_upscreen_distance" gbltype="Primitive" offset-in-file="000003D4" type="float">0</member>
+                        <member name="aim_randomization_radius" gbltype="Primitive" offset-in-file="000003D8" type="float">1</member>
+                        <member name="aim_exclusion_radius" gbltype="Primitive" offset-in-file="000003DC" type="float">0.5</member>
+                        <member name="aim_offset_y" gbltype="Primitive" offset-in-file="000003E0" type="float">-0.800000012</member>
+                        <member name="debug_aim_target" gbltype="Primitive" offset-in-file="000003E4" type="uint8">0</member>
+                    </member>
+                </member>
+            </member>
+        </instance>
+    </instances>
+</adf>
