@@ -63,7 +63,7 @@ namespace JustEditXml._CONTROLLER
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show($"could not open file, not an xml file", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                //System.Windows.MessageBox.Show($"could not open file, not an xml file", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

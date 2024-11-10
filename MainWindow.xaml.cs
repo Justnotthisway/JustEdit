@@ -28,6 +28,7 @@ namespace JustEditXml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string[] args = Environment.GetCommandLineArgs();
         public FoldingManager FoldingManager;
         private XmlFoldingStrategy foldingStrategy;
         private XmlFileEditorAvalonEdit _XmlFileEditor;
@@ -35,6 +36,11 @@ namespace JustEditXml
         {
             InitializeComponent();
             InitAvalonEdit();
+            if (true) // check if commandline args are a filepath
+            {
+                _XmlFileEditor = new XmlFileEditorAvalonEdit(this);
+                _XmlFileEditor.OpenXml(args[0]);
+            }
         }
         private void InitAvalonEdit()
         {
