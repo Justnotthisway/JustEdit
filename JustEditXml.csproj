@@ -66,7 +66,10 @@
     <Compile Include="_CONTROLLER\GameFileSelector.cs" />
     <Compile Include="_CONTROLLER\XmlFileEditorAvalonEdit.cs" />
     <Compile Include="_CONTROLLER\XmlFileEditorBase.cs" />
+    <Compile Include="_CONTROLLER\XmlFileEditorJst.cs" />
     <Compile Include="_MODEL\BoundXmlNode.cs" />
+    <Compile Include="_MODEL\jst\jstXmlNode.cs" />
+    <Compile Include="_MODEL\jst\jstXmlParser.cs" />
     <Compile Include="_MODEL\XmlLabeler.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -76,7 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="_CONTROLLER\GameFileConverter.cs" />
+    <Compile Include="_MODEL\GameFileConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

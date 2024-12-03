@@ -3,6 +3,7 @@ using ICSharpCode.AvalonEdit;
 using JustEditXml._CONTROLLER;
 using JustEditXml.Contoller;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using System.Xml;
 using System.Windows.Forms;
@@ -39,7 +39,7 @@ namespace JustEditXml
             if (true) // check if commandline args are a filepath
             {
                 _XmlFileEditor = new XmlFileEditorAvalonEdit(this);
-                _XmlFileEditor.OpenXml(args[0]);
+                //_XmlFileEditor.OpenXml(args[0]);
             }
         }
         private void InitAvalonEdit()
@@ -62,17 +62,30 @@ namespace JustEditXml
         private void Button_LoadFile(object sender, RoutedEventArgs e)
         {
             GameFileSelector gameFileSelector = new GameFileSelector();
-            GameFileConverter gameFileConverter = new GameFileConverter();
+            //GameFileConverter gameFileConverter = new GameFileConverter(filePath);
             _XmlFileEditor = new XmlFileEditorAvalonEdit(this);
             //XmlFileEditorWPF xmlFileEditor = new XmlFileEditorWPF(this);
 
-            //get the user to select a file from the Windows fileselect Dialog
+            //get the user to select a file from the Windows fileselect Dialog, count the total lines of text.
             string filePath = gameFileSelector.SelectGameFile();
+            int lineCount = File.ReadLines(filePath).Count();
+            // reset laoding bar Progress to 0;
+            this.ProgressBar.Value = 0;
+
+
+            //display loading in UI. Dispatcher.Invoke will force a UI update.
+            Dispatcher.Invoke(() =>
+            {
+                currentFileLabel.Text = $"Loading... {Path.GetFileName(filePath)}";
+                currentFileLineCount.Text = $"Lines: {lineCount}";
+            });
 
             //put the textcontent of the xml inside the Xml Preview Box (skip unpack for now), but delete old text first
             _XmlFileEditor.ClearAllText();
             _XmlFileEditor.OpenXml(filePath);
 
+            currentFileLabel.Text = $"Loaded: {Path.GetFileName(filePath)}";
+            
             // ---- (WPF stuff) ----
             // set the vertical size to something big so we dont get linebreaks 
             //XmlPreviewerBox.Document.PageWidth = 19200.00;
@@ -97,7 +110,7 @@ namespace JustEditXml
                     //XmlPreviewerBox.ScrollToVerticalOffset(XmlPreviewerBox.VerticalOffset + e.VerticalChange);
                 }
             }
-            
+
         }
         private void MyScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
@@ -110,12 +123,12 @@ namespace JustEditXml
             if (e.Delta > 0) // Scrolling up
             {
                 // Scroll up exactly TWO AvalonEdit Lines
-                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - XmlPreviewerBox.TextArea.TextView.DefaultLineHeight*2);
+                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset - XmlPreviewerBox.TextArea.TextView.DefaultLineHeight * 2);
             }
             else if (e.Delta < 0) // Scrolling down
             {
                 // Scroll down exactly TWO AvalonEdit Lines
-                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset + XmlPreviewerBox.TextArea.TextView.DefaultLineHeight*2);
+                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset + XmlPreviewerBox.TextArea.TextView.DefaultLineHeight * 2);
             }
         }
 

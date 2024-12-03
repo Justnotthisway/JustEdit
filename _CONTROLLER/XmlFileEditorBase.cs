@@ -1,8 +1,10 @@
 ﻿using JustEditXml._MODEL;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Xml;
@@ -12,12 +14,16 @@ namespace JustEditXml._CONTROLLER
 {
     internal abstract class XmlFileEditorBase
     {
-        public XmlFileEditorBase()
+        public XmlFileEditorBase(MainWindow _mainWindow)
         {
-
+            MainWindow = _mainWindow;
         }
+        MainWindow MainWindow { get; set; }
+
         protected XDocument _document;
         protected string _FilePath;
+        protected int _TotalWork;
+        protected int _CompletedWork;
         public BoundXmlNode RootNode { get; set; }
 
         //implement abstract methods in Child class with choosen UI Element
@@ -25,6 +31,10 @@ namespace JustEditXml._CONTROLLER
         abstract public void ClearAllText();
         abstract public void GeneratePropertyRows(string xmlFilePath, XDocument xmlDocument);
 
+        public async Task<XDocument> LoadXmlAsync(XmlReader reader)
+        {
+            return await Task.Run(() => XDocument.Load(reader));
+        }
         //entry point for the class, trigger it with Button etc. to load a complete formatted xml document in desired UI element.
         public void OpenXml(string xmlFilePath)
         {
@@ -40,11 +50,14 @@ namespace JustEditXml._CONTROLLER
                 };
 
                 // Create an XmlReader with the settings
-                using (XmlReader reader = XmlReader.Create(xmlFilePath, settings))
-                {
+                XmlReader reader = XmlReader.Create(xmlFilePath, settings);
+                
                     // Load the XDocument using the XmlReader
-                    _document = XDocument.Load(reader);
-                }
+                    _document = LoadXmlAsync(reader).Result;
+
+                    _TotalWork = _document.Descendants().Count();
+                    _CompletedWork = 0;
+                
 
                 // Clear the RichTextBox and set its text to the file contents
                 this.ClearAllText();
@@ -52,10 +65,7 @@ namespace JustEditXml._CONTROLLER
 
                 // loop over every node in the document recursively, keep track of depth for TABs
                 int depth = 0;
-                //foreach (var node in xmlDocument.Descendants())
-                //{
                 BuildXmlNode(_document.Root, depth);
-                //}
 
                 //UI -- generate the ui rows foreach node here
                 GeneratePropertyRows(xmlFilePath, _document);
@@ -99,6 +109,8 @@ namespace JustEditXml._CONTROLLER
 
                 closingDocumentLine = BuildXmlLineEnd(closingDocumentLine, node);
                 this.AddLine(closingDocumentLine); //we add </closingnode> here
+                _CompletedWork++;
+                MainWindow.ProgressBar.Value = (int)((_CompletedWork / _TotalWork) * 100);
             }
             else //IF WE HAVE NO CHILD ELEMENTS. only save innerText if has no child nodes, saves memory.
             {
@@ -106,6 +118,8 @@ namespace JustEditXml._CONTROLLER
                 documentLine += nodeValue;
                 documentLine = BuildXmlLineEnd(documentLine, node);
                 this.AddLine(documentLine); //we add </closingnode> here
+                _CompletedWork++;
+                MainWindow.ProgressBar.Value = (int)((_CompletedWork / _TotalWork) * 100);
             }
         }
         public string BuildXmlLineStart(string documentLine, XElement node)
@@ -164,7 +178,6 @@ namespace JustEditXml._CONTROLLER
                     //};
                 }
 
-                //paragraph.Inlines.Add($"<{node.Name} {attributeRun}>{innerText}</{node.Name}>\n");
                 documentLine += attributeName;
                 documentLine += attributeValue;
             }
@@ -188,6 +201,7 @@ namespace JustEditXml._CONTROLLER
 
             return closingDocumentLine;
         }
+
         //UI Stuff --- generate Rows with: label-value | label-type | input | apply-button
 
         public int GetNodeDepth(XElement node)

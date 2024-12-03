@@ -20,7 +20,7 @@ namespace JustEditXml._CONTROLLER
     {
         MainWindow MainWindow { get; set; }
         object[,] XLookupTable { get; set; }
-        public XmlFileEditorAvalonEdit(MainWindow _mainWindow)
+        public XmlFileEditorAvalonEdit(MainWindow _mainWindow) : base(_mainWindow)
         {
             MainWindow = _mainWindow;
             //UI_Height = 18;
@@ -34,7 +34,7 @@ namespace JustEditXml._CONTROLLER
         public double RowHeightCorrectionEditable = 0;
         public override void AddLine(string documentLine)
         {
-            string actualLine = documentLine.Replace("&#xA", "_lf_");
+            string actualLine = documentLine;
             actualLine = actualLine.Replace("\n", "")+"\n";
             MainWindow.XmlPreviewerBox.AppendText(actualLine);
         }
@@ -49,16 +49,16 @@ namespace JustEditXml._CONTROLLER
             int line = 0;
             MainWindow.StackPanelPropertyContainer.Children.Clear();
             MainWindow.StackPanelPropertyContainer.Children.Add(BuildUiFromXml(xmlDocument.Root, ref line));
+            //MainWindow.ProgressBar.Value = 0;
         }
         public UIElement BuildUiFromXml(XElement node, ref int lineIndex, int expanderDepth = 0)
         {
             expanderDepth++;
             lineIndex++;
 
-            IdStackPanel header = BuildHeaderRow(node, lineIndex);
             var expander = new Expander()
             {
-                Header = header,
+                Header = BuildHeaderRow(node, lineIndex),
                 IsExpanded = true,
             };
 
@@ -104,8 +104,8 @@ namespace JustEditXml._CONTROLLER
                 {
                     stackPanel.Children.Add(BuildUiFromXml(child, ref lineIndex));
                 }
-                stackPanel.Children.Add(BuildEmptyRow(node, lineIndex));
                 lineIndex++;
+                stackPanel.Children.Add(BuildEmptyRow(node, lineIndex));
             }
             else //return a stackpanel here.
             {
