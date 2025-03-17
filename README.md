@@ -1,6 +1,9 @@
 # JustEdit
 Tool for editing Just Cause gamefiles and packing Mods to Dropzone
 
+INSTRUCTION: 
+can be found in the newest release: https://github.com/Justnotthisway/JustEdit/releases/tag/v1.0.1
+
 TODOs :
 
 DO RIGHT NOW
